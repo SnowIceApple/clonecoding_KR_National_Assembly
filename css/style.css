@@ -3,6 +3,10 @@ html, body{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 #wrap{
     background: #EAEEF2;
     width: 100%;
@@ -148,12 +152,11 @@ html, body{
     top: 100%;
     padding: 20px 15px;
     box-sizing: border-box;
-    width: 171px;
+    width: 172px;
     height: 332px;
     z-index: 10;
 }
 
-.floor1 > li:last-child .floor2,
 .floor2:hover{
     background: #f6f6f6;
 }
