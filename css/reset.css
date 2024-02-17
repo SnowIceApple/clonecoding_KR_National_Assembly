@@ -64,6 +64,12 @@ button{
     border: 0;
     outline: none;
 	padding: 0;
+	cursor: pointer;
+}
+
+button,
+button *{
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 button:focus-visible{

@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KR National Assembly Clone coding</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/mobile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +20,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -238,15 +243,351 @@
                         </ul>
                     </nav>
                     <div class="nav_active_bg"></div>
-                    <div class="hb_right"></div>
+                    <div class="hb_right">
+                        <div class="hbr_slogan">
+                            <img src="./img/logo_slogan.png" alt="">
+                        </div>
+                        <div class="main_nav_search_btn">
+                            <a href="#">
+                                <span class="hidden_text">검색창 열기</span>
+                            </a>
+                            <div class="mnsb_ico">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
         <div id="fullpage">
-            <section id="main" class="section main_vis"></section>
+            <section id="main" class="section main_vis">
+                <div class="container">
+                    <div class="main section_inner">
+                        <div class="main_search">
+                            <div class="main_search_area">
+                                <input type="search" name="main_search" id="main_search_input" placeholder="검색어를 입력해주세요">
+                                <button type="submit">
+                                    <span class="hidden_text">검색하기</span>
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="section_content_box">
+                            <div class="main_tab_slide_box">
+                                <div class="main_tab_slide">
+                                    <div class="main_tab_menu mtm_type1">
+                                        <ul>
+                                            <li class="active">
+                                                <button>
+                                                    <span>국회의장 주요동정</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button>
+                                                    <span>본회의 위원회</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="mtm_more">
+                                            <a href="#" target="_blank">
+                                                <ion-icon name="add-outline"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main_tab_cont active">
+                                        <div class="swiper1 main_slide_type1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_1.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 크로아티아 총리·국회의장 만나 세일즈 의회외교</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_2.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 7박 9일간 크로아티아·불가리아 순방 성공적 마무리</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_3.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 불가리아 대통령·국회의장 면담…경제·문화교류 확대 논의</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper_control msc_type1">
+                                            <div class="mts_prev1 mts_btn1 mts_prev">
+                                                <a href="#"></a>
+                                            </div>
+                                            <div class="mts_next1 mts_btn1 mts_next">
+                                                <a href="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_tab_cont">
+                                        <div class="swiper2 main_slide_type1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_4.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 크로아티아 총리·국회의장 만나 세일즈 의회외교</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_5.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 7박 9일간 크로아티아·불가리아 순방 성공적 마무리</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_6.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 불가리아 대통령·국회의장 면담…경제·문화교류 확대 논의</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper_control msc_type1">
+                                            <div class="mts_prev2 mts_btn1 mts_prev">
+                                                <a href="#"></a>
+                                            </div>
+                                            <div class="mts_next2 mts_btn1 mts_next">
+                                                <a href="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_tab_slide">
+                                    <div class="main_tab_menu mtm_type1">
+                                        <ul>
+                                            <li class="active">
+                                                <button>
+                                                    <span>국회는 지금</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button>
+                                                    <span>국회 소식</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="mtm_more">
+                                            <a href="#" target="_blank">
+                                                <ion-icon name="add-outline"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main_tab_cont active">
+                                        <div class="swiper3 main_slide_type1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_1.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 크로아티아 총리·국회의장 만나 세일즈 의회외교</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_2.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 7박 9일간 크로아티아·불가리아 순방 성공적 마무리</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_3.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 불가리아 대통령·국회의장 면담…경제·문화교류 확대 논의</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper_control msc_type1">
+                                            <div class="mts_prev3 mts_btn1 mts_prev">
+                                                <a href="#"></a>
+                                            </div>
+                                            <div class="mts_next3 mts_btn1 mts_next">
+                                                <a href="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main_tab_cont">
+                                        <div class="swiper4 main_slide_type1">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_4.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 크로아티아 총리·국회의장 만나 세일즈 의회외교</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_5.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 7박 9일간 크로아티아·불가리아 순방 성공적 마무리</span>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" target="_blank">
+                                                        <span class="hidden_text"></span>
+                                                    </a>
+                                                    <div class="ss_img">
+                                                        <img src="./img/msp_6.jpg" alt="">
+                                                    </div>
+                                                    <div class="ss_desc">
+                                                        <span>金의장, 불가리아 대통령·국회의장 면담…경제·문화교류 확대 논의</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper_control msc_type1">
+                                            <div class="mts_prev4 mts_btn1 mts_prev">
+                                                <a href="#"></a>
+                                            </div>
+                                            <div class="mts_next4 mts_btn1 mts_next">
+                                                <a href="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main_bot_box">
+                                <div class="main_bot_cont">
+                                    <div class="main_tab_menu mtm_type1 type_sub">
+                                        <ul>
+                                            <li class="active">
+                                                <button>
+                                                    <span>보도자료</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button>
+                                                    <span>채용공고</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button>
+                                                    <span>공지사항</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="mtm_more">
+                                            <a href="#" target="_blank">
+                                                <ion-icon name="add-outline"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="main_tab_cont active">
+                                        <div class="main_notice">
+                                            <ul>
+                                                <li>
+                                                    <a href="#" class="desc">
+                                                        [국회사무처] 24.2.19.~24.2.23. 국회주간일정
+                                                    </a>
+                                                    <span class="date">
+                                                        2024-02-16
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="desc">
+                                                        [국회사무처] 24.2.19.~24.2.23. 국회주간일정
+                                                    </a>
+                                                    <span class="date">
+                                                        2024-02-16
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="desc">
+                                                        [국회사무처] 24.2.19.~24.2.23. 국회주간일정
+                                                    </a>
+                                                    <span class="date">
+                                                        2024-02-16
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="desc">
+                                                        [국회사무처] 24.2.19.~24.2.23. 국회주간일정
+                                                    </a>
+                                                    <span class="date">
+                                                        2024-02-16
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="desc">
+                                                        [국회사무처] 24.2.19.~24.2.23. 국회주간일정
+                                                    </a>
+                                                    <span class="date">
+                                                        2024-02-16
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main_bot_cont"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section id="today" class="section main_sec"></section>
             <section id="activity" class="section main_trd"></section>
             <section id="social" class="section main_fth"></section>
+            <footer id="footer" class="section fp-auto-height"></footer>
         </div>
     </div>
 </body>

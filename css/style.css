@@ -25,7 +25,15 @@ body{
     --na_gradient1-: linear-gradient(to right,  #162c7b 0%,#52a5dc 50%,#2bb7b3 100%);
     --na_color3-: rgb(81, 143, 187);
     --na_color4-: #22928F;
+    --na_color5-: #006bce;
+    --na_color6-: #B9BCBE;
+    --na_color7-: #222424;
 }
+
+section{
+    box-sizing: border-box;
+}
+
 
 /* header */
 
@@ -35,7 +43,7 @@ body{
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .header{
@@ -155,12 +163,27 @@ body{
     width: 172px;
     height: 332px;
     z-index: 10;
+    display: none;
+}
+
+.main_nav_active .floor2{
+    display: block;
+}
+
+.floor1 > li:first-child .floor2::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: -15px;
+    top: 22px;
+    width: 1px;
+    height: 80%;
+    background: rgba(0, 0, 0, 0.15);
 }
 
 .floor2:hover{
     background: #f6f6f6;
 }
-
 
 .floor2 li{
     width: 100%;
@@ -182,7 +205,7 @@ body{
 }
 
 .floor2 li a:hover span{
-    color: var(--na_color3-);
+    color: var(--na_color5-);
     border-bottom: 1px solid var(--na_color1-);
 }
 
@@ -192,7 +215,6 @@ body{
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%);
     width: 3px;
     height: 3px;
     background: var(--na_color3-);
@@ -204,12 +226,428 @@ body{
     top: 100%;
     width: 100%;
     height: 332px;
-    background: #fff;
+    background-color: #fff;
+    background-image: url('../img/logo_slogan.png');
+    background-repeat: no-repeat;
+    background-position: right 90% center;
+    background-size: 140px auto;
     z-index: -1;
     user-select: none;
+    display: none;
 }
 
-section{
+.main_nav_active .nav_active_bg{
+    display: block;
+}
+
+.hb_right{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.hbr_slogan img{
+    height: 50px;
+}
+
+.main_nav_search_btn{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin-left: 15px;
+}
+
+.main_nav_search_btn a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+}
+
+.mnsb_ico{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    user-select: none;
+    pointer-events: none;
+}
+
+.main_nav_search_btn:hover .mnsb_ico{
+    background: var(--na_color1-);
+}
+
+.mnsb_ico ion-icon{
+    font-size: 26px;
+}
+
+.main_nav_search_btn:hover .mnsb_ico ion-icon{
+    color: #fff;
+}
+
+/* main */
+
+.section_inner{
     padding-top: 150px;
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_search{
+    width: 820px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.main_search_area{
+    position: relative;
+    width: 100%;
+    height: 45px;
+}
+
+.main_search_area::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    border-radius: 7px;
+    background: var(--na_gradient1-);
+    z-index: -1;
+}
+
+.main_search_area input[type="search"]{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.main_search_area button{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.main_search_area button ion-icon{
+    font-size: 25px;
+}
+
+.section_content_box{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+}
+
+.scb_type1{
+    align-content: space-between;
+}
+
+.main_tab_slide_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 408px;
+}
+
+.main_tab_slide{
+    width: calc(50% - 4px);
+    height: 408px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main_tab_menu{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.main_tab_menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_tab_menu ul li{
+}
+
+.main_tab_menu ul li button{
+    position: relative;
+    text-align: center;
+    padding: 0 30px;
+}
+
+.main_tab_menu ul li.active button::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 3px;
+    background: var(--na_color2-);
+}
+
+.main_tab_menu ul li button span{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--na_color6-);
+}
+
+.main_tab_menu.mtm_type1 ul li button span{
+    line-height: 48px;
+    letter-spacing: -0.7px;
+}
+
+.main_tab_menu ul li.active button span{
+    color: var(--na_color2-);
+}
+
+.mtm_more a{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.05);
+    width: 24px;
+    height: 24px;
+}
+
+.mtm_more a:hover{
+    background: var(--na_color2-);
+}
+
+.mtm_more a ion-icon{
+    font-size: 22px;
+    padding: 1px;
+}
+
+.mtm_more a:hover ion-icon{
+    color: #fff;
+}
+
+.main_tab_cont{
+    display: none;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 20px;
+    position: relative;
+}
+
+.main_tab_cont.active{
+    display: block;
+}
+
+.main_slide_type1{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main_slide_type1 .swiper-slide{
+    position: relative;
+}
+
+.main_slide_type1 .swiper-slide a{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.main_slide_type1 .ss_img{
+    width: 100%;
+    height: 314px;
+}
+
+.main_slide_type1 .ss_img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.main_slide_type1 .ss_desc{
+    width: 100%;
+    height: calc(100% - 314px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.main_slide_type1 .ss_desc span{
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+    color: var(--na_color7-);
+    margin-bottom: 4px;
+}
+
+.swiper_control.msc_type1{
+    position: absolute;
+    left: 0;
+    top: 137px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0 5px;
+    pointer-events: all;
+}
+
+.swiper_control.msc_type1 > *{
+    pointer-events: all;
+}
+
+.mts_btn1{
+    transition: all .3s ease;
+}
+
+.mts_btn1.mts_prev:hover{
+    transform: translateX(-5px);
+}
+
+.mts_btn1.mts_next:hover{
+    transform: translateX(5px);
+}
+
+.mts_btn1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.mts_btn1 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url('../img/nmain_next.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .3s ease;
+}
+
+.mts_btn1:hover a{
+    background-color: #000;
+}
+
+.mts_btn1.mts_prev a{
+    transform: rotate(-180deg);
+}
+
+.main_bot_box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 230px;
+    margin-top: 8px;
+}
+
+.main_bot_box > div{
+    background: #fff;
+    width: calc(50% - 4px);
+    height: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.main_tab_menu.type_sub ul{
+    width: calc(100% - 40px);
+}
+
+.main_tab_menu.type_sub ul li{
+    width: 33.3333%;
+}
+
+.main_tab_menu.type_sub ul li button{
+    width: 100%;
+}
+
+.main_tab_menu.type_sub ul li:not(.active) button span{
+    font-weight: 400;
+}
+
+.main_notice{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 17px 0;
+}
+
+.main_notice ul{
+    width: 100%;
+}
+
+.main_notice ul li{
+    width: 100%;
+    margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main_notice ul li:last-child{
+    margin-bottom: 0px;
+}
+
+.main_notice ul li a{
+    display: block;
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80%;
+    letter-spacing: -0.6px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.main_notice ul li span{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.4px;
 }
