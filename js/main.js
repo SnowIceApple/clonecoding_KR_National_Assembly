@@ -124,6 +124,20 @@ $(document).ready(function(){
 
   });
 
+  const swiper6 = new Swiper('.swiper6', {
+    loop: true,
+    speed: 700,
+    autoplay: {
+      delay: 3500,
+    },
+
+    navigation: {
+      nextEl: '.mts_next6',
+      prevEl: '.mts_prev6',
+    },
+
+  });
+
   var today = today_ymd();
 
   function today_ymd(){
