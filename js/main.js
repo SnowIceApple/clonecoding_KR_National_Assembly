@@ -4,7 +4,7 @@ $(document).ready(function(){
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
-      normalScrollElements: '.today_info_list'
+      normalScrollElements: '.fullpage_normalScroll'
 	});
 
   $('.floor1 > li > a').on('mouseenter', function(){
@@ -108,6 +108,7 @@ $(document).ready(function(){
 
   const swiper5 = new Swiper('.swiper5', {
     effect: 'fade',
+    loop: true,
     speed: 2000,
     fadeEffect: {
       crossFade: true,
@@ -115,8 +116,6 @@ $(document).ready(function(){
     autoplay: {
       delay: 6000,
     },
-    observer: true, 
-    observerParents: true,
 
     navigation: {
       nextEl: '.mts_next5',
@@ -132,6 +131,15 @@ $(document).ready(function(){
     var weekday = ['일', '월', '화', '수', '목', '금', '토'][date.getDay()];
     return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2) + "(" + weekday + ")";
 }
+
+var today2 = today_ymd2();
+
+function today_ymd2(){
+  var date = new Date();
+  return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2);
+}
+
+$('.tid_tit h3').text(today2);
 
   $('.calendar_desc_tit strong').text(today_ymd);
 
