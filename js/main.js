@@ -4,6 +4,7 @@ $(document).ready(function(){
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
+      normalScrollElements: '.today_info_list'
 	});
 
   $('.floor1 > li > a').on('mouseenter', function(){
@@ -19,6 +20,7 @@ $(document).ready(function(){
       var tg = $(this);
       var idx = tg.index();
       $(this).closest('.main_tab_menu').siblings('.main_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+      $(this).closest('.main_tab_menu').siblings().find('.main_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
     });
   });
 
@@ -103,5 +105,116 @@ $(document).ready(function(){
     },
 
   });
+
+  const swiper5 = new Swiper('.swiper5', {
+    effect: 'fade',
+    speed: 2000,
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 6000,
+    },
+    observer: true, 
+    observerParents: true,
+
+    navigation: {
+      nextEl: '.mts_next5',
+      prevEl: '.mts_prev5',
+    },
+
+  });
+
+  var today = today_ymd();
+
+  function today_ymd(){
+    var date = new Date();
+    var weekday = ['일', '월', '화', '수', '목', '금', '토'][date.getDay()];
+    return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2) + "(" + weekday + ")";
+}
+
+  $('.calendar_desc_tit strong').text(today_ymd);
+
+  var currentDate = new Date();
+      var currentMonth = currentDate.getMonth();
+      var currentYear = currentDate.getFullYear();
+      
+      function renderCalendar(month, year) {
+        var daysInMonth = new Date(year, month + 1, 0).getDate();
+        var firstDayOfMonth = new Date(year, month, 1).getDay();
+        var table = $("<table>");
+        var tbody = $("<tbody>");
+        var tr = $("<tr>");
+        var dayOfWeek = 0;
+        
+        var days = ['일', '월', '화', '수', '목', '금', '토'];
+        for (var i = 0; i < days.length; i++) {
+          tr.append($("<th>").text(days[i]).addClass(i === 0 ? "sun" : i === 6 ? "sat" : ""));
+        }
+        tbody.append(tr);
+        
+        tr = $("<tr>");
+        for (var i = 0; i < firstDayOfMonth; i++) {
+          tr.append($("<td>").html("&nbsp;").addClass("sun"));
+          dayOfWeek++;
+        }
+        for (var day = 1; day <= daysInMonth; day++) {
+          if (dayOfWeek == 7) {
+            tbody.append(tr);
+            tr = $("<tr>");
+            dayOfWeek = 0;
+          }
+          var td = $("<td>").addClass(dayOfWeek === 0 ? "sun" : dayOfWeek === 6 ? "sat" : "");
+          var a = $("<a>").append($("<span>").text(day));
+          if (year === currentDate.getFullYear() && month === currentDate.getMonth() && day === currentDate.getDate()) {
+            a.addClass("today");
+          }
+
+          a.click(function() {
+            var selectedDate = year + "_" + (month + 1).toString().padStart(2, '0') + "_" + $(this).text().padStart(2, '0');
+            var selectedDate2 = year + "." + (month + 1).toString().padStart(2, '0') + "." + $(this).text().padStart(2, '0');
+            var dateObject = new Date(year, month, $(this).text());
+            var dayOfWeek = ['일', '월', '화', '수', '목', '금', '토'][dateObject.getDay()]; 
+            selectedDate2 += "(" + dayOfWeek + ")";
+            $(this).addClass(selectedDate).parents('table').find('td').children('a').not($(this)).removeClass();
+            $(this).addClass('active');
+            console.log(selectedDate);
+            $('.calendar_desc_tit strong').text(selectedDate2);
+          });
+          td.append(a);
+          tr.append(td);
+          dayOfWeek++;
+        }
+
+        for (var i = dayOfWeek; i < 7; i++) {
+          tr.append($("<td>").html("&nbsp;").addClass("sun"));
+        }
+        tbody.append(tr);
+        
+        table.append(tbody);
+        $("#calendar").html(table);
+        $("#currentMonthYear").text(year + "." + (month + 1).toString().padStart(2, '0'));
+      }
+      
+      $("#prevMonth").click(function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+      
+      $("#nextMonth").click(function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+      
+      renderCalendar(currentMonth, currentYear);
+
 
 });

@@ -28,6 +28,7 @@ body{
     --na_color5-: #006bce;
     --na_color6-: #B9BCBE;
     --na_color7-: #222424;
+    --na_color8-: #518fbb;
 }
 
 section{
@@ -161,7 +162,7 @@ section{
     padding: 20px 15px;
     box-sizing: border-box;
     width: 172px;
-    height: 332px;
+    height: 331px;
     z-index: 10;
     display: none;
 }
@@ -305,6 +306,7 @@ section{
     height: 100%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .main_search{
@@ -358,7 +360,7 @@ section{
 
 .section_content_box{
     width: 100%;
-    height: 100%;
+    flex: 1;
     box-sizing: border-box;
     padding-bottom: 15px;
 }
@@ -640,7 +642,7 @@ section{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 80%;
+    max-width: calc(100% - 90px);
     letter-spacing: -0.6px;
     font-weight: 400;
     line-height: 18px;
@@ -650,4 +652,325 @@ section{
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.4px;
+}
+
+.main_bot_cont.type2{
+    box-sizing: border-box;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seminar_tit{
+    width: 184px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: var(--na_color2-);
+    background-image: url('../img/new_semina_bg.png');
+    background-position: right -20px bottom -20px;
+    background-repeat: no-repeat;
+}
+
+.seminar_tit strong{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+    word-break: keep-all;
+}
+
+.seminar_slide{
+    position: relative;
+    width: calc(100% - 190px);
+    height: 100%;
+}
+
+.swiper_control.pos_2{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    width: calc(100% + 30px);
+}
+
+.ms_img_type2 .ss_img{
+    height: 100%;
+}
+
+.ms_img_type2 .ss_img img{
+    max-height: 100%;
+    object-fit: fill;
+}
+
+/* today */
+
+.section_tit{
+    width: 100%;
+    padding: 34px 0;
+    text-align: center;
+}
+
+.section_tit h2{
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.section_layout{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.layout_box{
+    background: #fff;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px 15px 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout_box.type2{
+    padding: 0px;
+}
+
+.section_layout.type1 .layout_box.wide{
+    width: calc(100% - 315px);
+    justify-content: space-between;
+}
+
+.section_layout.type1 .layout_box.banner{
+    width: 300px;
+}
+
+.today_info_desc{
+    width: 260px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.tid_tit{
+    position: relative;
+    width: 100%;
+    height: 85px;
+    background-color: var(--na_color4-);
+    background-image: url('../img/nmain_backlogo.png');
+    background-repeat: no-repeat;
+    background-position: right 10px bottom 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.tid_tit h3{
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.6px;
+}
+
+.today_info_list{
+    width: 100%;
+    height: 520px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding: 15px 0;
+    overscroll-behavior: contain;
+}
+
+.today_info_list > ul{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 12px;
+}
+
+.today_info_list > ul > li{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.today_info_list > ul > li:last-child{
+    margin-bottom: 0px;
+}
+
+.today_info_list > ul > li > h4{
+    font-size: 19px;
+    color: var(--na_color8-);
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    margin-bottom: 30px;
+}
+
+.today_info_list > ul > li > ul{
+    width: 100%;
+}
+
+.today_info_list > ul > li > ul > li{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.today_info_list > ul > li > ul > li:last-child{
+    margin-bottom: 0px;
+}
+
+.today_info_list > ul > li > ul > li p{
+    font-size: 14px;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+}
+
+.today_calendar_box{
+    width: calc(100% - 280px);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.main_tab_menu.type_mini{
+    padding: 0 10px;
+}
+
+.main_tab_menu.type_mini ul{
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main_tab_menu.type_mini button{
+    padding: 0 5px;
+}
+
+.main_tab_menu.type_mini button span{
+    line-height: 43px !important;
+    font-size: 15px;
+}
+
+.today_calendar{
+    margin-top: 10px;
+    width: 100%;
+    min-height: 318px;
+    background: #F9F9FA;
+}
+
+.calendar-header{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+#currentMonthYear{
+    width: auto;
+    font-weight: 700;
+}
+
+#calendar table{
+    width: 100%;
+}
+
+#calendar table th{
+    height: 30px;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 700;
+    width: calc(100% / 7);
+}
+
+#calendar table .sun *{
+    color: #CF4833;
+}
+
+#calendar table .sat *{
+    color: #395DB2;
+}
+
+#calendar table td{
+    height: 40px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+#calendar table td a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#calendar table td a.active span,
+#calendar table td a.today span{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #0A2266;
+}
+
+.calendar_desc{
+    width: 100%;
+}
+
+.calendar_desc_tit{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #000;
+    margin-bottom: 8px;
+}
+
+.calendar_desc_tit strong{
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.calendar_desc_list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 166px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.calendar_desc_list_info{
+    width: 100%;
+    height: 30px;
+}
+
+.main_tab_cont.type2{
+    padding: 0;
+}
+
+.cdl_box{
+    width: 100%;
+}
+
+.cdl_box ul{
+    width: 100%;
+}
+
+.cdl_box ul li{
+    width: 100%;
 }
