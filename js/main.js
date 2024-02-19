@@ -40,6 +40,20 @@ $(document).ready(function(){
     // console.log(ir_text_ex);
   });
 
+  $('.dr_table_tab_box table').each(function(){
+    $('td.num').each(function(){
+      var td_idx = $(this).parent('tr').index() + 1;
+      $(this).text(td_idx);
+    });
+
+    $('.table_tab_btn').on('click', function(){
+      $(this).addClass('active').siblings().removeClass('active');
+      var tg = $(this);
+      var idx = tg.index();
+      $(this).closest('.dr_table_tab_box').siblings('.dr_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+    });
+  });
+
   const swiper1 = new Swiper('.swiper1', {
     effect: 'fade',
     speed: 2000,

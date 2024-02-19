@@ -1547,4 +1547,139 @@ section{
     height: 100%;
     box-sizing: border-box;
     border: 1px solid var(--na_color1-);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dr_table_tab_box{
+    height: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid var(--na_color1-);
+}
+
+.dr_table_tab_box.type1{
+    width: 310px;
+}
+
+.dr_table_tab_box table{
+    width: 100%;
+    height: 100%;
+}
+
+.dr_table_tab_box table thead,
+.dr_table_tab_box table tbody tr{
+    display: table;
+    width: 100%;
+}
+
+.dr_table_tab_box table tr th,
+.dr_table_tab_box table tr td{
+    vertical-align: middle;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.dr_table_tab_box table tr th{
+    background-color: var(--na_color2-);
+    color: #fff;
+    font-weight: 700;
+}
+
+
+.dr_table_tab_box table tr th:first-child{
+    width: 16%;
+}
+
+.dr_table_tab_box table tr th:nth-child(2){
+    width: 20%;
+}
+
+.dr_table_tab_box table tr th:nth-child(3){
+    width: 25%;
+}
+
+.dr_table_tab_box table tr th:last-child{
+    width: auto;
+}
+
+.dr_table_tab_box table tr td:first-child{
+    width: 15%;
+}
+
+.dr_table_tab_box table tr td:nth-child(2){
+    width: 25%;
+}
+
+.dr_table_tab_box table tr td:nth-child(3){
+    width: 20%;
+}
+
+
+.dr_table_tab_box table tbody{
+    display: block;
+    box-sizing: border-box;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 3px 5px 5px 3px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    max-height: calc(100% - 48px);
+    padding-right: 11px;
+}
+
+.dr_table_tab_box table tbody tr{
+    border-bottom: 1px solid #E3E3E3;
+    counter-reset: number 0;
+}
+
+.dr_table_tab_box table tbody tr td{
+    position: relative;
+    letter-spacing: -0.7px;
+}
+
+.dr_table_tab_box table tbody tr td button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dr_table_tab_box table tbody tr td:first-child{
+    counter-increment: number 1;
+}
+
+.table_tab_btn{
+    position: relative;
+}
+
+.table_tab_btn.active{
+    background: var(--na_color4-);
+    color: #fff;
+}
+
+.table_tab_btn::before{
+    display: none;
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--na_color4-);
+}
+
+.table_tab_btn.active::before{
+    display: block;
+}
+
+.dr_tab_cont{
+    flex: 1;
+    display: none;
+}
+
+.dr_tab_cont.active{
+    display: block;
 }
