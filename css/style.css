@@ -734,6 +734,10 @@ section{
     flex-wrap: wrap;
 }
 
+.layout_box.lb_np{
+    padding: 0px;
+}
+
 .layout_box.type2{
     padding: 0px;
 }
@@ -1292,4 +1296,255 @@ section{
     display: inline-block;
     margin-right: 3px;
     letter-spacing: -0.5px;
+}
+
+.main_act_tab_btn{
+    width: 100%;
+}
+
+.main_act_tab_btn ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_act_tab_btn.floor_1st ul li{
+    width: 25%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--na_color2-);
+}
+
+.main_act_tab_btn.floor_1st ul li.active{
+    border: 1px solid var(--na_color2-);
+    border-bottom: 0px;
+}
+
+.main_act_tab_btn ul li button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_act_tab_btn.floor_1st ul li button span{
+    line-height: 46px;
+    font-size: 16px;
+    color: #96969b;
+    letter-spacing: -0.7px;
+}
+
+.main_act_tab_btn.floor_1st ul li.active button span{
+    font-weight: 700;
+    color: var(--na_color2-);
+}
+
+.main_act_tab_cont.floor_1st{
+    display: none;
+    width: 100%;
+    height: calc(100% - 46px);
+    box-sizing: border-box;
+    border: 1px solid var(--na_color2-);
+    border-top: 0px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+}
+
+.main_act_tab_cont.active{
+    display: block;
+}
+
+.main_act_tab_btn.floor_2nd{
+    width: 100%;
+}
+
+.main_act_tab_btn.floor_2nd ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main_act_tab_btn.floor_2nd ul li{
+    border-radius: 3px;
+    margin: 0 3px;
+}
+
+.main_act_tab_btn.floor_2nd ul li button{
+    width: 230px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid var(--na_color2-);
+    border-radius: 3px;
+}
+
+.main_act_tab_btn.floor_2nd ul li.active button{
+    background-color: var(--na_color2-);
+}
+
+.main_act_tab_btn.floor_2nd ul li button span{
+    font-size: 16px;
+    line-height: 38px;
+    color: var(--na_color2-);
+    letter-spacing: -0.5px;
+}
+
+.main_act_tab_btn.floor_2nd ul li.active button span{
+    color: #fff;
+}
+
+.main_act_tab_cont.floor_2nd{
+    display: none;
+    width: 100%;
+    height: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.main_act_tab_cont.floor_2nd.type1{
+    box-sizing: border-box;
+    padding-top: 15px;
+}
+
+.main_act_tab_cont.floor_2nd.type2{
+    padding-top: 12px;
+}
+
+.main_act_tab_cont.floor_2nd.active{
+    display: block;
+}
+
+.act_bill_list{
+    width: 100%;
+    height: calc(100% - 40px);
+    box-sizing: border-box;
+}
+
+.act_bill_list ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.act_bill_list ul li{
+    width: 270px;
+    height: 230px;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    padding: 20px 20px 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.act_bill_list ul li h3{
+    display: block;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    line-height: 26px;
+    height: 52px;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+.bill_info{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.bill_info a{
+    display: block;
+    width: 100%;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    letter-spacing: -0.5px;
+    background-color: var(--na_color4-);
+}
+
+.bill_desc{
+    width: 100%;
+    flex: 1;
+}
+
+.bill_desc > *{
+    display: block;
+    width: 100%;
+    color: #454545;
+}
+
+.bill_desc strong{
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    margin-bottom: 6px;
+}
+
+.bill_desc span{
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.bill_date{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.bill_date .date{
+    color: #8e8e8e;
+    letter-spacing: -0.6px;
+}
+
+.bill_date .num{
+    color: #2bb7b3;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.act_bill_control{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.act_bill_control button{
+    width: 30px;
+    height: 27px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-image: url('../img/nmain_arrow02.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.act_bill_control button.prev{
+    transform: rotate(-180deg);
+}
+
+.act_bill_control_counter{
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.act_bill_control_counter span:first-child{
+    font-weight: 600;
+}
+
+.discuss_result{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--na_color1-);
 }
