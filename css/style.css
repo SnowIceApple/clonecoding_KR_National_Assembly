@@ -1346,11 +1346,12 @@ section{
     border: 1px solid var(--na_color2-);
     border-top: 0px;
     box-sizing: border-box;
-    padding: 15px 20px;
+    padding: 12px 15px;
+    flex-wrap: wrap;
 }
 
 .main_act_tab_cont.active{
-    display: block;
+    display: flex;
 }
 
 .main_act_tab_btn.floor_2nd{
@@ -1620,7 +1621,7 @@ section{
     display: block;
     box-sizing: border-box;
     width: calc(100% - 8px);
-    height: calc(100% - 8px);
+    height: 473px;
     margin: 3px 5px 5px 3px;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -1647,7 +1648,7 @@ section{
 }
 
 .dr_table_tab_box table tbody tr td:first-child{
-    counter-increment: number 1;
+
 }
 
 .table_tab_btn{
@@ -1678,8 +1679,92 @@ section{
 .dr_tab_cont{
     flex: 1;
     display: none;
+    box-sizing: border-box;
+    padding: 15px 12px;
+}
+
+.dr_tab_cont.bg_2{
+    background-color: #F9F9FA;
 }
 
 .dr_tab_cont.active{
     display: block;
+}
+
+.discuss_result_list{
+    width: 100%;
+    height: 420px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.discuss_result_list ul{
+    width: 100%;
+}
+
+.discuss_result_list ul li{
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.discuss_result_list ul li a{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.passed_img{
+    width: 45px;
+}
+
+.discuss_info{
+    width: calc(100% - 45px);
+    margin-bottom: 10px;
+}
+
+.discuss_info span{
+    margin-right: 5px;
+    display: inline;
+    line-height: 1.5;
+}
+
+.discuss_info .text{
+    font-size: 15px;
+    letter-spacing: -0.6px;
+}
+
+.discuss_info .name{
+    font-size: 14px;
+    color: #056ccf;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+}
+
+.discuss_result_link{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.discuss_result_link ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.discuss_result_link ul li a{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 165px;
+    height: 50px;
+    box-sizing: border-box;
+    border: 1px solid var(--na_color2-);
+    background: #fff;
+    padding: 0 20px;
+    color: var(--na_color1-);
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 15px;
 }
