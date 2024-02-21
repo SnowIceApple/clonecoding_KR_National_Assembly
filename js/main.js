@@ -34,11 +34,21 @@ $(document).ready(function(){
     });
   });
 
+  $('.result_wide_tab_scroll ul li a').each(function(){
+    $(this).on('click', function(){
+      $(this).parent('li').addClass('active').siblings().removeClass('active');
+      var tg = $(this);
+      var idx = tg.parent().index();
+      $('.result_wide_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+    });
+  });
+
   $('.main_slide_type1 .swiper-slide a').each(function(){
     var ir_text_ex = $(this).closest('.swiper-slide').find('.ss_desc span').text();
     $(this).find('.hidden_text').text(ir_text_ex + '\u00A0' + '새창 열기');
     // console.log(ir_text_ex);
   });
+
 
   $('.dr_table_tab_box table').each(function(){
     $('td.num').each(function(){
@@ -262,5 +272,35 @@ $('.tid_tit h3').text(today2);
       
       renderCalendar(currentMonth, currentYear);
 
+      $('.result_wide_tab_scroll').mCustomScrollbar({
+
+      });
+
+      var ctx = document.getElementById('chart1');
+
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: ['찬성', '반대', '기권'],
+          datasets: [{
+            data: [174, 2, 6],
+            backgroundColor: [
+              'rgba(4, 180, 49, 1)', 
+              'rgba(255, 0, 0, 1)', 
+              'rgba(255, 255, 88, 1)'
+            ],
+            borderWidth: 0,
+            
+
+          }],
+          
+        },
+        options: {
+          plugins: {
+            legend: false,
+          },
+        },
+
+      });
 
 });

@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1920, user-scalable=yes, target-densitydpi=1600" />
     <title>KR National Assembly Clone coding</title>
 
     <link rel="stylesheet" href="./css/reset.css">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.css"/>
 
 
     <!-- fonts -->
@@ -23,6 +25,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -3436,7 +3441,149 @@
                                             </div>
                                         </div>
                                         <div class="main_act_tab_cont floor_2nd type2">
-                                            <div class="discuss_result"></div>
+                                            <div class="discuss_result type2">
+                                                <div class="result_wide_tab">
+                                                    <div class="result_wide_tab_scroll mCustomScrollbar fullpage_normalScroll" data-mcs-theme="rounded-dark">
+                                                        <ul>
+                                                            <li class="active">
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>원안가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">정치자금법 일부개정법률안(대안)</span>
+                                                                        <span class="name">(정치개혁특별위원장)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>원안가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">자동차손해배상 보장법 일부개정법률안(대안)</span>
+                                                                        <span class="name">(국토교통위원장)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>원안가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">자동차관리법 일부개정법률안(대안)</span>
+                                                                        <span class="name">(국토교통위원장)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>원안가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">교통약자의 이동편의 증진법 일부개정법률안(대안)</span>
+                                                                        <span class="name">(국토교통위원장)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>수정가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">국제항공 탄소 배출량 관리에 관한 법률안</span>
+                                                                        <span class="name">(박정하의원 등 10인)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>수정가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">혁신도시 조성 및 발전에 관한 특별법 일부개정법률안</span>
+                                                                        <span class="name">(강대식의원 등 10인)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>수정가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">한국국토정보공사법안</span>
+                                                                        <span class="name">(김윤덕의원 등 20인)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>원안가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">부동산투자회사법 일부개정법률안</span>
+                                                                        <span class="name">(김병욱의원 등 20인)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <div class="result_status">
+                                                                        <span>수정가결</span>
+                                                                    </div>
+                                                                    <div class="result_desc">
+                                                                        <span class="tit">녹색건축물 조성 지원법 일부개정법률안</span>
+                                                                        <span class="name">(조오섭의원 등 20인)</span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="result_wide_tab_cont active">
+                                                    <div class="rwt_info_link">
+                                                        <a href="#" target="_blank" class="type1">제안이유 및 주요내용</a>
+                                                    </div>
+                                                    <div class="rwt_info_link">
+                                                        <a href="#" target="_blank" class="type2">의안상세조회</a>
+                                                    </div>
+                                                    <div class="rwt_chart">
+                                                        <div class="rwt_chart_box">
+                                                            <canvas id="chart1"></canvas>
+                                                        </div>
+                                                        <div class="discuss_num">
+                                                            <ul>
+                                                                <li>
+                                                                    재석 :
+                                                                    <span>192</span>
+                                                                </li>
+                                                                <li>
+                                                                    재적 :
+                                                                    <span>298</span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="chart_labels">
+                                                            <ul>
+                                                                <li class="cl_color1">찬성(174)</li>
+                                                                <li class="cl_color2">반대(2)</li>
+                                                                <li class="cl_color3">기권(6)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="rwt_info_link">
+                                                        <a href="#" target="_blank" class="type3">표결결과 더보기</a>
+                                                    </div>
+                                                </div>
+                                                <div class="result_wide_tab_cont"></div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="main_act_tab_cont floor_1st"></div>
