@@ -19,8 +19,7 @@ $(document).ready(function(){
       $(this).addClass('active').siblings().removeClass('active');
       var tg = $(this);
       var idx = tg.index();
-      $(this).closest('.main_act_tab_btn').siblings('.main_act_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
-      $(this).closest('.main_act_tab_btn').siblings().find('.main_act_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+      $(this).parents('.main_act_tab_btn').siblings('.main_act_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
     });
   });
 
@@ -299,6 +298,8 @@ $('.tid_tit h3').text(today2);
           plugins: {
             legend: false,
           },
+          animation: true,
+          animationEasing : "easeOutSine",
         },
 
       });
