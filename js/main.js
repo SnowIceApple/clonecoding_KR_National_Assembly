@@ -7,6 +7,8 @@ $(document).ready(function(){
       normalScrollElements: '.fullpage_normalScroll'
 	});
 
+  // $.fn.fullpage.destroy();
+
   $('.floor1 > li > a').on('mouseenter', function(){
     $('#header').addClass('main_nav_active');
   });
@@ -305,6 +307,95 @@ $('.tid_tit h3').text(today2);
           animation: true,
           animationEasing : "easeOutSine",
         },
+
+      });
+
+      var ctx2 = document.getElementById('chart2');
+
+      new Chart(ctx2, {
+        type: 'pie',
+        data: {
+          labels: ['찬성', '반대', '기권'],
+          datasets: [{
+            data: [189, 1, 2],
+            backgroundColor: [
+              'rgba(4, 180, 49, 1)', 
+              'rgba(255, 0, 0, 1)', 
+              'rgba(255, 255, 88, 1)'
+            ],
+            borderWidth: 0,
+            
+
+          }],
+          
+        },
+        options: {
+          plugins: {
+            legend: false,
+          },
+          animation: true,
+          animationEasing : "easeOutSine",
+        },
+
+      });
+
+      var ctx3 = document.getElementById('chart3');
+
+      new Chart(ctx3, {
+        type: 'pie',
+        data: {
+          labels: ['찬성', '반대', '기권'],
+          datasets: [{
+            data: [193, 0, 2],
+            backgroundColor: [
+              'rgba(4, 180, 49, 1)', 
+              'rgba(255, 0, 0, 1)', 
+              'rgba(255, 255, 88, 1)'
+            ],
+            borderWidth: 0,
+            
+
+          }],
+          
+        },
+        options: {
+          plugins: {
+            legend: false,
+          },
+          animation: true,
+          animationEasing : "easeOutSine",
+        },
+        
+
+      });
+
+      var ctx4 = document.getElementById('chart4');
+
+      new Chart(ctx4, {
+        type: 'pie',
+        data: {
+          labels: ['찬성', '반대', '기권'],
+          datasets: [{
+            data: [199, 0, 0],
+            backgroundColor: [
+              'rgba(4, 180, 49, 1)', 
+              'rgba(255, 0, 0, 1)', 
+              'rgba(255, 255, 88, 1)'
+            ],
+            borderWidth: 0,
+            
+
+          }],
+          
+        },
+        options: {
+          plugins: {
+            legend: false,
+          },
+          animation: true,
+          animationEasing : "easeOutSine",
+        },
+        
 
       });
 

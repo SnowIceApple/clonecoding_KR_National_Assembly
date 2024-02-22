@@ -1660,9 +1660,10 @@ section{
 .dr_table_tab_box table tr th,
 .dr_table_tab_box table tr td{
     vertical-align: middle;
-    height: 40px;
+    height: 42px;
     font-size: 14px;
     text-align: center;
+    line-height: 1.2;
 }
 
 .dr_table_tab_box table tr th{
@@ -1705,7 +1706,7 @@ section{
     display: block;
     box-sizing: border-box;
     width: calc(100% - 8px);
-    height: 473px;
+    height: 470px;
     margin: 3px 5px 5px 3px;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -1782,13 +1783,20 @@ section{
     scrollbar-width: thin;
 }
 
+.discuss_result_list h4{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    margin-bottom: 15px;
+}
+
 .discuss_result_list ul{
     width: 100%;
 }
 
 .discuss_result_list ul li{
     width: 100%;
-    padding-top: 10px;
+    padding: 10px 0;
     border-bottom: 1px solid #ccc;
 }
 
@@ -1804,13 +1812,26 @@ section{
 
 .discuss_info{
     width: calc(100% - 45px);
-    margin-bottom: 10px;
+}
+
+.discuss_result_list.type2 .discuss_info{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+}
+
+.discuss_result_list.type2 .discuss_info *{
+    color: #000;
 }
 
 .discuss_info span{
     margin-right: 5px;
     display: inline;
     line-height: 1.5;
+}
+
+.discuss_result_list.type2 .discuss_info span{
+    margin-right: 0px;
 }
 
 .discuss_info .text{
@@ -1834,6 +1855,11 @@ section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
+}
+
+.discuss_result_link ul li{
+    width: calc(33.3333% - 6.6666px);
 }
 
 .discuss_result_link ul li a{
@@ -1841,7 +1867,7 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    width: 165px;
+    width: 100%;
     height: 50px;
     box-sizing: border-box;
     border: 1px solid var(--na_color2-);
@@ -2136,4 +2162,51 @@ section{
 
 .chart_labels ul li.cl_color3::before{
     background: rgba(255, 255, 88, 1);
+}
+
+.dr_table_tab_box.type2{
+    width: 360px;
+}
+
+.dr_table_tab_box.type2 table tr th:first-child{
+    width: 12%;
+}
+
+.dr_table_tab_box.type2 table tr th:nth-child(2){
+    width: 15%;
+}
+
+.dr_table_tab_box.type2 table tr th:nth-child(3){
+    width: 17%;
+}
+
+.dr_table_tab_box.type2 table tr th:nth-child(4){
+    width: 20%;
+}
+
+.dr_table_tab_box.type2 table tr th:last-child{
+    width: auto;
+}
+
+.dr_table_tab_box.type2 table tr td:first-child{
+    width: 13%;
+}
+
+.dr_table_tab_box.type2 table tr td:nth-child(2){
+    width: 15%;
+}
+
+.dr_table_tab_box.type2 table tr td:nth-child(3){
+    width: 17%;
+}
+
+.dr_table_tab_box.type2 table tr td:nth-child(4){
+    width: 28%;
+}
+
+.dr_chart_tab{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px 12px;
 }
