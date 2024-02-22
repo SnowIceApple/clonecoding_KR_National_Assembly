@@ -14,6 +14,10 @@ $(document).ready(function(){
     $('#header').removeClass('main_nav_active');
   });
 
+  $('.fixed_menu_btn').on('click', function(){
+    $('.main_fixed_menu').toggleClass('active');
+  });
+
   $('.main_act_tab_btn').each(function(){
     $(this).children().find('li').on('click', function(){
       $(this).addClass('active').siblings().removeClass('active');
