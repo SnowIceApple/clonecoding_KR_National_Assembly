@@ -376,7 +376,52 @@ section{
     letter-spacing: -0.5px;
 }
 
+/* section_moving_btn */
 
+.section_moving_btn{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section_moving_btn.top{
+    top: 150px;
+    transform: translateX(-50%) rotate(180deg);
+    animation: upDown1 1.3s linear infinite;
+}
+
+@keyframes upDown1{
+    0%{
+        transform: translateX(-50%) translateY(0px) rotate(180deg);
+    }
+
+    50%{
+        transform: translateX(-50%) translateY(-20px) rotate(180deg);
+    }
+
+    100%{
+        transform: translateX(-50%) translateY(0px) rotate(180deg);
+    }
+}
+
+.section_moving_btn.bot{
+    bottom: 0;
+    animation: upDown2 1.3s linear infinite;
+}
+
+@keyframes upDown2{
+    0%{
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    50%{
+        transform: translateX(-50%) translateY(20px);
+    }
+
+    100%{
+        transform: translateX(-50%) translateY(0px);
+    }
+}
 
 /* main */
 
@@ -2259,7 +2304,10 @@ section{
 .dr_chart_tab_cont{
     display: none;
     flex: 1;
+    box-sizing: border-box;
+    padding-top: 30px;
 }
+
 
 .dr_chart_tab_cont.active{
     display: block;
