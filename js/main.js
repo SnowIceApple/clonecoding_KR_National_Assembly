@@ -69,6 +69,15 @@ $(document).ready(function(){
     });
   });
 
+  $('.dr_chart_tab_btn').each(function(){
+    $(this).children().find('li').on('click', function(){
+      $(this).addClass('active').siblings().removeClass('active');
+      var tg = $(this);
+      var idx = tg.index();
+      $(this).parents('.dr_chart_tab_btn').siblings('.dr_chart_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+    });
+  });
+
   const swiper1 = new Swiper('.swiper1', {
     effect: 'fade',
     speed: 2000,
@@ -398,5 +407,89 @@ $('.tid_tit h3').text(today2);
         
 
       });
+
+      var dr_chart_data1 = {
+        labels: ["본회의", "운영위", "법사위", "정무위", "기재위", "교육위", "과방위", "외통위", "국방위", "행안위", "문체위", "농해수위", "산자중기위", "복지위", "환노위", "국토위", "정보위", "여가위", "예결위", "윤리특별위원회", "특위", "기타"],
+        datasets: [
+            {
+                label: "제출건수",
+                backgroundColor: '#86B1DB',
+                data: [257, 475, 2166, 1959, 2379, 1191, 1050, 431, 606, 3615, 1036, 1547, 1566, 2830, 2170, 2338, 33, 436, 113, 50, 278, 42]
+            },
+            {
+                label: "처리건수",
+                backgroundColor: '#8FC41F',
+                data: [246, 83, 483, 615, 968, 401, 393, 188, 265, 1349, 478, 688, 663, 1021, 663, 1018, 16, 104, 113, 0, 169, 33]
+            }
+        ]
+    };
+
+
+
+    var ctx5 = document.getElementById('dr_chart_1');
+    var dr_chart_1 = new Chart(ctx5, {
+      type: 'bar',
+      data: dr_chart_data1,
+      options: {
+        scales: {
+          x: { 
+            grid: {
+              display: false,
+            }
+
+          },
+          y: {
+            grid: {
+              drawOnChartArea: true,
+            }
+        }
+      }
+      }
+      
+});
+
+var dr_chart_data2 = {
+  labels: ["본회의", "운영위", "법사위", "정무위", "기재위", "교육위", "과방위", "외통위", "국방위", "행안위", "문체위", "농해수위", "산자중기위", "복지위", "환노위", "국토위", "정보위", "여가위", "예결위", "윤리특별위원회", "특위", "기타"],
+  datasets: [
+      {
+          label: "처리율",
+          backgroundColor: '#86B1DB',
+          data: [95, 17, 22, 31, 40, 33, 37, 43, 43, 37, 46, 44, 42, 36, 30, 43, 48, 23, 100, 0, 60, 78],
+      }
+  ]
+};
+
+var ctx6 = document.getElementById('dr_chart_2');
+    var dr_chart_2 = new Chart(ctx6, {
+      type: 'bar',
+      data: dr_chart_data2,
+
+      options: {
+        scales: {
+          x: { 
+            grid: {
+              display: false,
+            }
+
+          },
+          y: {
+            grid: {
+              drawOnChartArea: true,
+            },
+            ticks: {
+              min: 0,
+              max: 100,
+              callback: function(value){return value+ "%"}
+           },
+            scaleLabel: {
+            display: true,
+            labelString: "Percentage"
+           }
+        }
+      },
+
+      }
+      
+});
 
 });

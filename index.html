@@ -28,6 +28,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
 </head>
 <body>
     <div id="wrap">
@@ -4282,11 +4283,16 @@
                                                 <div class="dr_chart_tab">
                                                     <div class="dr_chart_tab_btn">
                                                         <ul>
-                                                            <li class="active"><button></button></li>
-                                                            <li><button></button></li>
+                                                            <li class="active"><button>제출 및 처리건수</button></li>
+                                                            <li><button>처리율</button></li>
                                                         </ul>
                                                     </div>
-                                                    <div class="dr_chart_tab_cont active"></div>
+                                                    <div class="dr_chart_tab_cont active">
+                                                        <canvas id="dr_chart_1"></canvas>
+                                                    </div>
+                                                    <div class="dr_chart_tab_cont">
+                                                        <canvas id="dr_chart_2"></canvas>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
