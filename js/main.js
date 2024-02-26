@@ -78,6 +78,15 @@ $(document).ready(function(){
     });
   });
 
+  $('.pr_list_bot_tab_btn').each(function(){
+    $(this).children().find('li').on('click', function(){
+      $(this).addClass('active').siblings().removeClass('active');
+      var tg = $(this);
+      var idx = tg.index();
+      $(this).parents('.pr_list_bot_tab_btn').siblings('.pr_list_bot_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+    });
+  });
+
   const swiper1 = new Swiper('.swiper1', {
     effect: 'fade',
     speed: 2000,
@@ -491,5 +500,13 @@ var ctx6 = document.getElementById('dr_chart_2');
       }
       
 });
+
+$('.pr_list_vote_bar span').each(function(){
+  var bar_data = $(this).data('percent');
+  $(this).css('width' , bar_data + '%' );
+});
+
+
+
 
 });
