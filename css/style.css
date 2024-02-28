@@ -2871,7 +2871,6 @@ section{
 .sns_list{
     width: 285px;
     height: 285px;
-    box-sizing: border-box;
     background: #fff;
     box-sizing: border-box;
     padding: 15px 10px 10px 10px;
