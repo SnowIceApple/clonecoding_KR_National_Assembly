@@ -195,6 +195,20 @@ $(document).ready(function(){
 
   });
 
+  const swiper7 = new Swiper('.swiper7', {
+    loop: true,
+    speed: 700,
+    autoplay: {
+      delay: 3500,
+    },
+
+    navigation: {
+      nextEl: '.mts_next7',
+      prevEl: '.mts_prev7',
+    },
+
+  });
+
   var today = today_ymd();
 
   function today_ymd(){
@@ -257,7 +271,7 @@ $('.tid_tit h3').text(today2);
             selectedDate2 += "(" + dayOfWeek + ")";
             $(this).addClass(selectedDate).parents('table').find('td').children('a').not($(this)).removeClass();
             $(this).addClass('active');
-            console.log(selectedDate);
+            // console.log(selectedDate);
             $('.calendar_desc_tit strong').text(selectedDate2);
           });
           td.append(a);
