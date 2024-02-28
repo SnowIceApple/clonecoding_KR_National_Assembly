@@ -1,10 +1,10 @@
 @media all and (max-width: 1500px){
 
     .floor1 > li{
-        padding: 0 40px;
+        width: 155px;
     }
 
     .floor2{
-        width: 152px;
+        width: 155px;
     }
 }

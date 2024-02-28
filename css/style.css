@@ -147,10 +147,12 @@ section{
 
 .floor1 > li{
     position: relative;
-    padding: 0 50px;
+    width: 175px;
     height: 80px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .floor1 > li > a{
@@ -161,11 +163,11 @@ section{
 
 .floor2{
     position: absolute;
-    left: 30px;
+    left: 35px;
     top: 100%;
     padding: 20px 15px;
     box-sizing: border-box;
-    width: 172px;
+    width: 175px;
     height: 331px;
     z-index: 10;
     display: none;
