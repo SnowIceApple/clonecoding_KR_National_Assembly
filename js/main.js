@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#fullpage').fullpage({
-      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth'],
+      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six'],
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
@@ -521,6 +521,25 @@ $('.pr_list_vote_bar span').each(function(){
 });
 
 
+const swiper_sns = new Swiper('.swiper_sns', {
+  loop: true,
+  speed: 5000,
+  autoplay: {
+    delay: 0,
+    stopOnLastSlide: true,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+ },
+  observer: true, 
+  observerParents: true,
+
+
+
+  slidesPerView: "auto",
+  spaceBetween: 14.66667,
+
+
+});
 
 
 });

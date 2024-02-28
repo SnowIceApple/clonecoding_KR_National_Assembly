@@ -29,6 +29,10 @@ body{
     --na_color6-: #B9BCBE;
     --na_color7-: #222424;
     --na_color8-: #518fbb;
+    --na_youtube-:#FB2105;
+    --na_insta-: linear-gradient(-200deg, #6228d7, #ee2a7b, #f9ce34);
+    --na_facebook-: #1877F2;
+    --na_naver-: #2FB44A;
 }
 
 section{
@@ -382,6 +386,7 @@ section{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 .section_moving_btn.top{
@@ -1381,6 +1386,8 @@ section{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .brd_sch_cate span{
@@ -1632,7 +1639,7 @@ section{
 }
 
 .bill_date .num{
-    color: #2bb7b3;
+    color: var(--na_color4-);
     font-weight: 600;
     letter-spacing: -0.7px;
 }
@@ -2704,7 +2711,7 @@ section{
     font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.6px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .issue_law_area{
@@ -2719,4 +2726,267 @@ section{
 .swiper7 .swiper-slide a img{
     width: 100%;
     max-height: 217px;
+}
+
+.sns_tab_btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.sns_tab_btn ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 4px;
+}
+
+.sns_tab_btn ul li{
+    height: 35px;
+}
+
+.sns_tab_btn ul li button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    height: 100%;
+    border-radius: 17.5px;
+    background: #C0C0C0;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px contain;
+    overflow: hidden;
+}
+
+.sns_tab_btn ul li.all button{
+    width: 80px;
+    line-height: 35px;
+}
+
+.sns_tab_btn ul li.all.active button{
+    background-color: var(--na_color2-);
+}
+
+.sns_tab_btn ul li.type2 button{
+    width: 35px;
+}
+
+.sns_tab_btn ul li.facebook button{
+    background-image: url('../img/nicon_facebook.svg');
+}
+
+.sns_tab_btn ul li.insta button{
+    background-image: url('../img/nicon_instagram.svg');
+    position: relative;
+    background-color: transparent;
+}
+
+.sns_tab_btn ul li.youtube button{
+    background-image: url('../img/nicon_youtube.svg');
+}
+
+.sns_tab_btn ul li.naver button{
+    background-image: url('../img/nicon_blog.svg');
+}
+
+.sns_tab_btn ul li.insta button::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#c0c0c0 0% 100%);
+    z-index: -1;
+}
+
+.sns_tab_btn ul li.all:hover button,
+.sns_tab_btn ul li.all.active button{
+    background-color: var(--na_color2-);
+}
+
+.sns_tab_btn ul li.facebook:hover button,
+.sns_tab_btn ul li.facebook.active button{
+    background-color: var(--na_facebook-);
+}
+
+.sns_tab_btn ul li.insta:hover button::before,
+.sns_tab_btn ul li.insta.active button::before{
+    background-image: var(--na_insta-);
+}
+
+.sns_tab_btn ul li.youtube:hover button,
+.sns_tab_btn ul li.youtube.active button{
+    background-color: var(--na_youtube-);
+}
+
+.sns_tab_btn ul li.naver:hover button,
+.sns_tab_btn ul li.naver.active button{
+    background-color: var(--na_naver-);
+}
+
+.sns_tab_btn a{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    height: 100%;
+    border-radius: 17.5px;
+    padding: 0 25px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    line-height: 35px;
+}
+
+.sns_tab_cont{
+    display: none;
+    width: 100%;
+    height: calc(100% - 35px);
+    box-sizing: border-box;
+    padding: 22px 8px 0px 8px;
+}
+
+.sns_tab_cont.active{
+    display: block;
+}
+
+.sns_list_box{
+    width: 100%;
+}
+
+.sns_list_box ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.sns_list{
+    width: 285px;
+    height: 285px;
+    box-sizing: border-box;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 15px 10px 10px 10px;
+    border: 1px solid #e3e3e3;
+}
+
+.sns_list_box ul li{
+}
+
+.sns_list_box ul li:nth-child(4n) .sns_list{
+}
+
+.sns_list:hover{
+    border-color: #000;
+}
+
+.sns_list a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.sns_list_tit{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.slt_cate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.slt_ico{
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain;
+    border-radius: 50%;
+}
+
+.sns_list.youtube .slt_ico{
+    background: var(--na_youtube-) url('../img/nicon_youtube.svg');
+}
+
+.sns_list.insta .slt_ico{
+    background: var(--na_insta-) url('../img/nicon_instagram.svg');
+}
+
+.sns_list.facebook .slt_ico{
+    background: var(--na_facebook-);
+}
+
+.sns_list.naver .slt_ico{
+    background: var(--na_naver-);
+}
+
+.slt_from{
+    margin-left: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+}
+
+.slt_date{
+    font-size: 12px;
+    color: #727678;
+    letter-spacing: -0.7px;
+}
+
+.slt_date span{
+    margin-right: -2px;
+}
+
+.sns_thumbnail{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 165px;
+}
+
+.sns_thumbnail img{
+    width: 100%;
+    height: 100%;
+}
+
+.sns_list a h3{
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    line-height: 1.3;
+    height: 42px;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 5px 10px 0px 10px;
+}
+
+.sns_list_slide{
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.sns_list_slide .swiper-wrapper{
+    transition-timing-function: linear !important;
+}
+
+
+.sns_list_slide .swiper-slide{
+    width: 285px !important;
+    box-sizing: border-box;
 }
