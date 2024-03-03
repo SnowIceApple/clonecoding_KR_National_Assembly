@@ -28,6 +28,8 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -4936,14 +4938,162 @@
                             </div>
                         </div>
                         <div class="section_moving_btn bot">
-                            <a href="#main_six">
+                            <a href="#main_ffh">
                                 <img src="./img/down_arrow6.png" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- <section id="social" class="section main_six"></section> -->
+            <section id="current" class="section main_svt">
+                <div class="container">
+                    <div class="section_inner">
+                        <div class="section_moving_btn top">
+                            <a href="#main_fth">
+                                <img src="./img/down_arrow6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="section_tit">
+                            <h2>국회의원 현황</h2>
+                        </div>
+                        <div class="section_content_box type2">
+                            <div class="section_layout type2">
+                                <div class="layout_box half">
+                                    <div class="current_tab_btn">
+                                        <ul>
+                                            <li class="active"><button>의석수 현황</button></li>
+                                        </ul>
+                                        <div class="mtm_more">
+                                            <a href="#" target="_blank">
+                                                <ion-icon name="add-outline"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="current_tab_cont active">
+                                        <div class="ctc_chart">
+                                            <div class="ctc_chart_box type_pos_a">
+                                                <canvas id="ctc_chart1"></canvas>
+                                                <span>297명</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout_box half">
+                                    <div class="current_tab_btn">
+                                        <ul>
+                                            <li class="active"><button>당선횟수별 현황</button></li>
+                                            <li><button>연령별 현황</button></li>
+                                            <li><button>성별 현황</button></li>
+                                        </ul>
+                                        <div class="mtm_more">
+                                            <a href="#" target="_blank">
+                                                <ion-icon name="add-outline"></ion-icon>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="current_tab_cont active">
+                                        <div class="ctc_chart">
+                                            <div class="ctc_chart_box">
+                                                <canvas id="ctc_chart2"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="current_tab_cont">
+                                        <div class="ctc_chart">
+                                            <div class="ctc_chart_box">
+                                                <canvas id="ctc_chart3"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="current_tab_cont">
+                                        <div class="ctc_chart">
+                                            <div class="ctc_chart_box">
+                                                <canvas id="ctc_chart4"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layout_box wide_half">
+                                    <div class="composition">
+                                        <div class="comp_tit">
+                                            <h3>위원회 구성</h3>
+                                            <div class="mtm_more type_no_hover">
+                                                <div class="mtm_more_add_txt">
+                                                    <a href="#" target="_blank">위원회명단 상세조회</a>
+                                                </div>
+                                                <a href="#" target="_blank">
+                                                    <ion-icon name="add-outline"></ion-icon>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="comp_box">
+                                            <div class="comp_list_tab_btn fullpage_normalScroll">
+                                                <ul>
+                                                    <li class="active"><button>국회운영위원회</button></li>
+                                                    <li><button>법제사법위원회</button></li>
+                                                    <li><button>정무위원회</button></li>
+                                                    <li><button>기획재정위원회</button></li>
+                                                    <li><button>교육위원회</button></li>
+                                                    <li><button>과학기술정보방송통신위원회</button></li>
+                                                    <li><button>외교통일위원회</button></li>
+                                                    <li><button>국방위원회</button></li>
+                                                    <li><button>행정안전위원회</button></li>
+                                                    <li><button>문화체육관광위원회</button></li>
+                                                    <li><button>농림축산식품해양수산위원회</button></li>
+                                                    <li><button>산업통상자원중소벤처기업위원회</button></li>
+                                                    <li><button>보건복지위원회</button></li>
+                                                    <li><button>환경노동위원회</button></li>
+                                                    <li><button>국토교통위원회</button></li>
+                                                    <li><button>정보위원회</button></li>
+                                                    <li><button>여성가족위원회</button></li>
+                                                    <li><button>예산결산특별위원회</button></li>
+                                                    <li><button>국회 2030 부산세계박람회 유치지원 특별위원회</button></li>
+                                                    <li><button>형사사법체계개혁특별위원회</button></li>
+                                                    <li><button>정치개혁특별위원회</button></li>
+                                                    <li><button>연금개혁특별위원회</button></li>
+                                                    <li><button>인구위기특별위원회</button></li>
+                                                    <li><button>기후위기특별위원회</button></li>
+                                                    <li><button>첨단전략산업특별위원회</button></li>
+                                                    <li><button>윤리특별위원회</button></li>
+                                                </ul>
+                                            </div>
+                                            <div class="comp_list_tab_cont active"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section_moving_btn bot">
+                            <a href="#main_six">
+                                <img src="./img/down_arrow6.png" alt="">
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section id="books" class="section main_eit">
+                <div class="container">
+                    <div class="section_inner">
+                        <div class="section_moving_btn top">
+                            <a href="#main_six">
+                                <img src="./img/down_arrow6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="section_tit">
+                            <h2>국회 간행물</h2>
+                        </div>
+                        <div class="section_content_box">
+                            
+                        </div>
+                        <div class="section_moving_btn bot">
+                            <a href="#main_eit">
+                                <img src="./img/down_arrow6.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
             <!-- <footer id="footer" class="section fp-auto-height"></footer> -->
         </div>
     </div>

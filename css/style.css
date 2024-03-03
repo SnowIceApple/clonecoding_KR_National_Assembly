@@ -498,6 +498,10 @@ section{
     padding-bottom: 15px;
 }
 
+.section_content_box.type2{
+    padding-bottom: 7.5px;
+}
+
 .scb_type1{
     align-content: space-between;
 }
@@ -570,23 +574,23 @@ section{
     color: var(--na_color2-);
 }
 
-.mtm_more a{
+.mtm_more > a{
     display: inline-block;
     background: rgba(0, 0, 0, 0.05);
     width: 24px;
     height: 24px;
 }
 
-.mtm_more a:hover{
+.mtm_more > a:hover{
     background: var(--na_color2-);
 }
 
-.mtm_more a ion-icon{
+.mtm_more > a ion-icon{
     font-size: 22px;
     padding: 1px;
 }
 
-.mtm_more a:hover ion-icon{
+.mtm_more > a:hover ion-icon{
     color: #fff;
 }
 
@@ -2990,4 +2994,201 @@ section{
 .sns_list_slide .swiper-slide{
     width: 285px !important;
     box-sizing: border-box;
+}
+
+/* current */
+
+.section_layout.type2{
+    align-content: space-between;
+    gap: 15px;
+}
+
+.layout_box.half{
+    width: calc(50% - 7.5px);
+    height: 320px;
+    padding: 7px 20px 20px 20px;
+}
+
+.layout_box.wide_half{
+    width: 100%;
+    height: 320px;
+    padding: 15px 20px;
+}
+
+.current_tab_btn{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.current_tab_btn ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.current_tab_btn ul li{
+    margin-right: 30px;
+}
+
+.current_tab_btn ul li:last-child{
+    margin-right: 0px;
+}
+
+.current_tab_btn ul li button{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    color: var(--na_color6-);
+    line-height: 38px;
+}
+
+.current_tab_btn ul li.active button{
+    color: #000;
+}
+
+.current_tab_cont{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: calc(100% - 38px);
+    overflow: hidden;
+}
+
+.current_tab_cont.active{
+    display: block;
+}
+
+.ctc_chart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+}
+
+.ctc_chart_box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ctc_chart_box.type_pos_a{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ctc_chart_box.type_pos_a span{
+    position: absolute;
+    left: 40%;
+    bottom: 38%;
+    font-size: 22px;
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
+}
+
+.composition{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.comp_tit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.comp_tit h3{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.7px;
+    color: #000;
+}
+
+.mtm_more.type_no_hover{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.mtm_more.type_no_hover .mtm_more_add_txt a{
+    font-size: 15px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+.mtm_more.type_no_hover:hover > a{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mtm_more.type_no_hover:hover > a ion-icon{
+    color: #000;
+}
+
+.comp_box{
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100% - 40px);
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    padding: 12px;
+}
+
+.comp_list_tab_btn{
+    width: 235px;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    box-sizing: border-box;
+    padding-right: 6px;
+}
+
+.comp_list_tab_btn ul{
+    width: 100%;
+}
+
+.comp_list_tab_btn ul li{
+    width: 100%;
+}
+
+.comp_list_tab_btn ul li button{
+    width: 100%;
+    font-size: 15px;
+    letter-spacing: -0.8px;
+    font-weight: 500;
+    color: #000;
+    padding: 10px 15px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.comp_list_tab_btn ul li.active button{
+    color: #fff;
+    background-color: var(--na_color2-);
+}
+
+.comp_list_tab_cont{
+    display: none;
+    width: calc(100% - 235px);
+    height: 100%;
+}
+
+.comp_list_tab_cont.active{
+    display: block;
 }

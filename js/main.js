@@ -1,6 +1,8 @@
+
+
 $(document).ready(function(){
     $('#fullpage').fullpage({
-      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six'],
+      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six', 'main_svt', 'main_eit'],
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
@@ -313,6 +315,8 @@ $('.tid_tit h3').text(today2);
 
       });
 
+      Chart.register(ChartDataLabels);
+
       var ctx = document.getElementById('chart1');
 
       new Chart(ctx, {
@@ -335,6 +339,9 @@ $('.tid_tit h3').text(today2);
         options: {
           plugins: {
             legend: false,
+            datalabels: {
+              display: false,
+            },
           },
           animation: true,
           animationEasing : "easeOutSine",
@@ -364,6 +371,9 @@ $('.tid_tit h3').text(today2);
         options: {
           plugins: {
             legend: false,
+            datalabels: {
+              display: false,
+            },
           },
           animation: true,
           animationEasing : "easeOutSine",
@@ -393,6 +403,9 @@ $('.tid_tit h3').text(today2);
         options: {
           plugins: {
             legend: false,
+            datalabels: {
+              display: false,
+            },
           },
           animation: true,
           animationEasing : "easeOutSine",
@@ -423,6 +436,9 @@ $('.tid_tit h3').text(today2);
         options: {
           plugins: {
             legend: false,
+            datalabels: {
+              display: false,
+            },
           },
           animation: true,
           animationEasing : "easeOutSine",
@@ -454,6 +470,11 @@ $('.tid_tit h3').text(today2);
       type: 'bar',
       data: dr_chart_data1,
       options: {
+        plugins: {
+          datalabels: {
+            display: false,
+          },
+        },
         scales: {
           x: { 
             grid: {
@@ -488,6 +509,11 @@ var ctx6 = document.getElementById('dr_chart_2');
       data: dr_chart_data2,
 
       options: {
+        plugins: {
+          datalabels: {
+            display: false,
+          },
+        },
         scales: {
           x: { 
             grid: {
@@ -532,14 +558,275 @@ const swiper_sns = new Swiper('.swiper_sns', {
  },
   observer: true, 
   observerParents: true,
-
-
-
   slidesPerView: "auto",
   spaceBetween: 14.66667,
 
 
 });
+
+$('.current_tab_btn').each(function(){
+  $(this).children().find('li').on('click', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    var tg = $(this);
+    var idx = tg.index();
+    $(this).parents('.current_tab_btn').siblings('.current_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+  });
+});
+
+var ctc_chart_data1 = {
+  labels: ["더불어민주당", "국민의 힘", "녹색정의당", "개혁신당", "새진보연합", "진보당", "새로운미래", "무소속"],
+  datasets: [
+      {
+          backgroundColor: [
+            'rgb(53, 127, 196)', 
+            'rgb(220, 83, 86)', 
+            'rgb(255, 237, 0)',
+            'rgb(217, 8, 32)',
+            'rgb(217, 8, 32)',
+            'rgb(217, 8, 32)',
+            'rgb(153, 153, 153)',
+          ],
+          data: [160, 113, 6, 4, 1, 1, 1, 11],
+          borderWidth: 1,
+      }
+  ]
+};
+
+var ctc1 = document.getElementById('ctc_chart1');
+    var dr_chart_2 = new Chart(ctc1, {
+
+      type: 'doughnut',
+      data: ctc_chart_data1,
+
+      options: {
+        rotation: -90,
+        circumference: 180,
+        responsive: true, 
+        layout: {
+          padding: {
+            left: 50,
+            right: 100,
+            top: 100,
+            bottom: 100,
+          },
+        },
+
+        plugins: {
+          legend: false,
+            datalabels: {
+              anchor: 'end',
+              align: 'end',
+              offset: function(context) {
+                return (context.dataIndex < 2) ? 20 : 40;
+              },
+              color: '#000',
+              font: {
+                size: 8,
+                weight: 800,
+              },
+              formatter: function(value, context) {
+                var labels = context.chart.data.labels;
+                var label = labels[context.dataIndex];
+                if (context.dataIndex < 2) {
+                  return label + '\n' + value;
+                } else {
+                  return label + ' ' + value;
+                }
+              },
+          },
+        },
+      },
+      
+      
+});
+
+var ctc_chart_data1 = {
+  labels: ["초선", "재선", "3선", "4선", "5선", "6선"],
+  datasets: [
+      {
+          // label: "제출건수",
+          backgroundColor: 'rgb(34, 146, 143)',
+          data: [155, 69, 40, 20, 12, 1]
+      },
+  ]
+};
+
+
+
+var ctc2 = document.getElementById('ctc_chart2');
+var ctc_chart2 = new Chart(ctc2, {
+type: 'bar',
+data: ctc_chart_data1,
+options: {
+  layout: {
+    padding: {
+      top: 30,
+      bottom: 10,
+    },
+  },
+  plugins: {
+    legend: false,
+    datalabels: {
+      anchor: 'end',
+      align: 'end',
+      offset: 5,
+      color: '#000',
+      font: {
+        weight: 600,
+      },
+      formatter: function(value, context) {
+        return value + '명';
+      },
+    },
+  },
+  scales: {
+    x: { 
+      grid: {
+        display: false,
+      }
+
+    },
+    y: {
+      grid: {
+        drawOnChartArea: true,
+      },
+      min: 0, 
+      max: 200,
+      ticks: {
+        stepSize: 50,
+      },
+    },
+  },
+}
+
+});
+
+var ctc_chart_data2 = {
+  labels: ["30대", "40대", "50대", "60대", "70대"],
+  datasets: [
+      {
+          // label: "제출건수",
+          backgroundColor: [
+            'rgb(124, 181, 236)',
+            'rgb(67, 67, 72)',
+            'rgb(144, 237, 125)',
+            'rgb(247, 163, 92)',
+            'rgb(128, 133, 233)',
+          ],
+          data: [7, 23, 116, 134, 17]
+      },
+  ]
+};
+
+var ctc3 = document.getElementById('ctc_chart3');
+var ctc_chart3 = new Chart(ctc3, {
+type: 'bar',
+data: ctc_chart_data2,
+options: {
+  layout: {
+    padding: {
+      top: 30,
+      bottom: 10,
+    },
+  },
+  plugins: {
+    legend: false,
+    datalabels: {
+      anchor: 'end',
+      align: 'end',
+      offset: 5,
+      color: '#000',
+      font: {
+        weight: 600,
+      },
+      formatter: function(value, context) {
+        return value + '명';
+      },
+    },
+  },
+  scales: {
+    x: { 
+      grid: {
+        display: false,
+      }
+
+    },
+    y: {
+      grid: {
+        drawOnChartArea: true,
+      },
+      ticks: {
+        stepSize: 50,
+      },
+    },
+  },
+}
+
+});
+
+var ctc_chart_data3 = {
+  labels: ["남", "여"],
+  datasets: [
+      {
+          // label: "제출건수",
+          backgroundColor: [
+            '#0000ff',
+            '#ff0000',
+          ],
+          data: [241, 56]
+      },
+  ]
+};
+
+var ctc4 = document.getElementById('ctc_chart4');
+var ctc_chart4 = new Chart(ctc4, {
+type: 'bar',
+data: ctc_chart_data3,
+options: {
+  layout: {
+    padding: {
+      top: 30,
+      bottom: 10,
+    },
+  },
+  plugins: {
+    legend: false,
+    datalabels: {
+      anchor: 'end',
+      align: 'end',
+      offset: 5,
+      color: '#000',
+      font: {
+        weight: 600,
+      },
+      formatter: function(value, context) {
+        return value + '명';
+      },
+    },
+  },
+  scales: {
+    x: { 
+      grid: {
+        display: false,
+      }
+
+    },
+    y: {
+      grid: {
+        drawOnChartArea: true,
+      },
+      min: 0,
+      max: 300,
+      ticks: {
+        stepSize: 50,
+      },
+    },
+  },
+}
+
+});
+
+
 
 
 });
