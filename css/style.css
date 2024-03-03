@@ -1560,6 +1560,7 @@ section{
 .act_bill_list{
     width: 100%;
     height: calc(100% - 40px);
+    min-height: 480px;
     box-sizing: border-box;
 }
 
@@ -2878,9 +2879,6 @@ section{
     width: 285px;
     height: 285px;
     background: #fff;
-    box-sizing: border-box;
-    padding: 15px 10px 10px 10px;
-    border: 1px solid #e3e3e3;
 }
 
 .sns_list_box ul li{
@@ -2889,16 +2887,19 @@ section{
 .sns_list_box ul li:nth-child(4n) .sns_list{
 }
 
-.sns_list:hover{
-    border-color: #000;
-}
-
 .sns_list a{
     width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
+    box-sizing: border-box;
+    padding: 15px 10px 10px 10px;
+    border: 1px solid #e3e3e3;
+}
+
+.sns_list:hover a{
+    border-color: #000;
 }
 
 .sns_list_tit{
@@ -3208,7 +3209,7 @@ section{
     height: 100%;
     overflow-x: hidden;
     box-sizing: border-box;
-    padding: 0 1px 4px 0;
+    padding: 0 1px 4px 1px;
 }
 
 /* .comp_swiper .swiper-wrapper{
@@ -3273,4 +3274,220 @@ section{
     top: 50%;
     transform: translate(-50%, -50%);
     width: 96%;
+}
+
+/* publications */
+
+.publications_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 35px 25px 30px 25px;
+}
+
+.publications_main{
+    width: 100%;
+    height: 485px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.pblc_bookcover{
+    width: 610px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+.pblc_bookcover ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.pblc_bookcover ul li{
+    width: 150px;
+    height: 214px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.pblc_bookcover ul li.wide{
+    width: 275px;
+    height: 100%;
+}
+
+.pblc_bookcover ul li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+}
+
+.pblc_bookcover ul li a img{
+    width: 100%;
+    height: 100%;
+}
+
+.pblc_bookInfo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 515px;
+    height: 100%;
+}
+
+.pblc_search{
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.pblc_search ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pblc_search ul li{
+    position: relative;
+    height: 38px;
+}
+
+.pblc_search ul li.select{
+    width: 150px;
+}
+
+.pblc_search ul li.input{
+    width: calc(100% - 160px);
+}
+
+.pblc_search ul li select, 
+.pblc_search ul li input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+}
+
+.pblc_search ul li input{
+    padding: 0 50px 0 15px;
+}
+
+.pblc_search ul li button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: url('../img/n_icon_search.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 21px;
+    opacity: 0.4;
+}
+
+.pblc_list{
+    width: 100%;
+}
+
+.pblc_list ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.pblc_list ul li{
+    width: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.pblc_list ul li:last-child{
+    border-bottom: 0px;
+}
+
+.pblc_list ul li a{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pblc_list ul li a span{
+    font-size: 14px;
+    display: block;
+    line-height: 30px;
+}
+
+.pblc_list ul li a .tit{
+    color: #000;
+    width: calc(100% - 100px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    box-sizing: border-box;
+}
+
+.pblc_list ul li a .from{
+    width: 100px;
+    color: #1f959d;
+    text-align: right;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.publications_banner{
+    width: 100%;
+    height: calc(100% - 485px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+.publications_banner ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.publications_banner ul li{
+    width: 220px;
+    height: 70px;
+}
+
+.publications_banner ul li a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+}
+
+.publications_banner ul li:nth-child(3) img{
+    display: inline-block;
+    padding-top: 12px;
 }

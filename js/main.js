@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     $('#fullpage').fullpage({
-      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six', 'main_svt', 'main_eit'],
+      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six', 'footer'],
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
@@ -826,6 +826,15 @@ options: {
 
 });
 
+$('.comp_list_tab_btn').each(function(){
+  $(this).children().find('li').on('click', function(){
+    $(this).addClass('active').siblings().removeClass('active');
+    var tg = $(this);
+    var idx = tg.index();
+    $(this).parents('.comp_list_tab_btn').siblings('.comp_list_tab_cont').eq(idx).addClass('active').siblings().removeClass('active');
+  });
+});
+
 var comp_slide_options = {
   loop: true,
   speed: 500,
@@ -843,5 +852,13 @@ cs1_options.navigation = {
 };
 
 var comp_swiper1 = new Swiper('.comp_swiper1', cs1_options);
+
+var cs2_options = Object.assign({}, comp_slide_options);
+cs2_options.navigation = {
+    nextEl: '.compS_next2',
+    prevEl: '.compS_prev2',
+};
+
+var comp_swiper2 = new Swiper('.comp_swiper2', cs2_options);
 
 });
