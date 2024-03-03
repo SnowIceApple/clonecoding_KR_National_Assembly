@@ -1355,6 +1355,8 @@ section{
     background-position: center;
     box-sizing: border-box;
     padding: 8px 5px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
 }
 
 .brd_sch_list ul{
@@ -3147,7 +3149,7 @@ section{
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #e3e3e3;
-    padding: 12px;
+    padding: 12px 0px 12px 12px;
 }
 
 .comp_list_tab_btn{
@@ -3191,4 +3193,84 @@ section{
 
 .comp_list_tab_cont.active{
     display: block;
+}
+
+.comp_slide_box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 13px 85px 10px 85px;
+}
+
+.comp_swiper{ 
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0 1px 4px 0;
+}
+
+/* .comp_swiper .swiper-wrapper{
+    transition-timing-function: linear !important;
+} */
+
+.comp_swiper .swiper-slide{
+    background-color: #fff;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+}
+
+.comp_swiper .swiper-slide a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #e3e3e3;
+    color: #000;
+}
+
+.comp_swiper .swiper-slide a h5{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    text-align: center;
+}
+
+.comp_swiper .swiper-slide a .cs_img{
+    display: block;
+    width: 100%;
+    height: 95px;
+    overflow: hidden;
+    margin: 11px 0;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+}
+
+.comp_swiper .swiper-slide a .cs_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.comp_swiper .swiper-slide a h4{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.comp_swiper .swiper-slide a span{
+    font-size: 14px;
+    letter-spacing: -0.5px;
+}
+
+.swiper_control.pos_comp{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 96%;
 }

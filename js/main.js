@@ -549,7 +549,7 @@ $('.pr_list_vote_bar span').each(function(){
 
 const swiper_sns = new Swiper('.swiper_sns', {
   loop: true,
-  speed: 5000,
+  speed: 3500,
   autoplay: {
     delay: 0,
     stopOnLastSlide: true,
@@ -826,7 +826,22 @@ options: {
 
 });
 
+var comp_slide_options = {
+  loop: true,
+  speed: 500,
+  observer: true, 
+  observerParents: true,
+  slidesPerView: 6,
+  spaceBetween: 15,
+  slidesPerGroup: 6,
+};
 
+var cs1_options = Object.assign({}, comp_slide_options);
+cs1_options.navigation = {
+    nextEl: '.compS_next1',
+    prevEl: '.compS_prev1',
+};
 
+var comp_swiper1 = new Swiper('.comp_swiper1', cs1_options);
 
 });
