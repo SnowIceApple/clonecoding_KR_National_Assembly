@@ -3002,8 +3002,11 @@ section{
 /* current */
 
 .section_layout.type2{
-    align-content: space-between;
     gap: 15px;
+}
+
+.section_layout.type_current{
+    height: 655px;
 }
 
 .layout_box.half{
@@ -3287,6 +3290,7 @@ section{
     background-color: #fff;
     box-sizing: border-box;
     padding: 35px 25px 30px 25px;
+    height: 650px;
 }
 
 .publications_main{
