@@ -23,6 +23,18 @@ $(document).ready(function(){
     $('.main_fixed_menu').toggleClass('active');
   });
 
+  $('.modal_open').each(function(e){
+    $(this).on('click', function(){
+      $('body').addClass('modal_active');
+    });
+  });
+
+  $('.modal_close').each(function(e){
+    $(this).on('click', function(){
+      $('body').removeClass('modal_active');
+    });
+  });
+
   $('.main_act_tab_btn').each(function(){
     $(this).children().find('li').on('click', function(){
       $(this).addClass('active').siblings().removeClass('active');

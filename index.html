@@ -259,11 +259,31 @@
                             <img src="./img/logo_slogan.png" alt="">
                         </div>
                         <div class="main_nav_search_btn">
-                            <a href="#">
+                            <a href="#" class="modal_open">
                                 <span class="hidden_text">검색창 열기</span>
                             </a>
                             <div class="mnsb_ico">
                                 <ion-icon name="search-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="modal main_search_modal mid_modal">
+                            <div class="msm_inner">
+                                <a href="#" class="modal_close">
+                                    <ion-icon name="close-outline"></ion-icon>
+                                </a>
+                                <div class="msm_input_box">
+                                    <label for="main_modal_search">
+                                        <ion-icon name="search-outline"></ion-icon>
+                                        통합검색
+                                    </label>
+                                    <div class="main_search_area">
+                                        <input type="search" name="main_modal_search" id="main_modal_search">
+                                        <button type="submit">
+                                            <span class="hidden_text">검색하기</span>
+                                            <ion-icon name="search-outline"></ion-icon>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -5601,6 +5621,7 @@
                 </div>
             </footer>
         </div>
+        <div class="modal_background"></div>
     </div>
 </body>
 </html>
