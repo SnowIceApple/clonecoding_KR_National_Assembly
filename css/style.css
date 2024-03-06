@@ -3495,3 +3495,156 @@ section{
     display: inline-block;
     padding-top: 12px;
 }
+
+/* footer */
+
+#footer{
+    width: 100%;
+}
+
+.footer{
+    width: 100%;
+    height: 100%;
+    padding: 25px 0 40px 0;
+    background: #fff;
+    margin-top: 150px;
+    border-top: 1px solid #ccc;
+}
+
+.footer_inner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft_logo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 240px;
+}
+
+.ft_logo img{
+    width: 180px;
+    height: auto;
+}
+
+.ft_cont{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: calc(100% - 240px);
+}
+
+.ft_list{
+    margin-bottom: 15px;
+}
+
+.ft_list ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ft_list ul li{
+    padding: 0 15px;
+    padding-bottom: 1px;
+    border-right: 1px solid #000;
+}
+
+.ft_list ul li:first-child{
+    padding-left: 0px;
+}
+
+.ft_list ul li:last-child{
+    border-right: none;
+}
+
+.ft_list ul li a{
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+    color: #000;
+    line-height: 17px;
+}
+
+.ft_address{
+    margin-bottom: 12px;
+}
+
+.ft_address address{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ft_address address p{
+    font-size: 14px;
+    letter-spacing: -0.7px;
+    font-weight: 400;
+}
+
+.ft_address address ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft_address address ul li{
+    position: relative;
+    padding-left: 8px;
+    margin-left: 10px;
+}
+
+.ft_address address ul li::before{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.ft_address address ul li a{
+    color: #2a87e1;
+    text-decoration: underline;
+}
+
+.ft_copyright{
+    margin-bottom: 20px;
+}
+
+.ft_copyright p{
+    font-size: 12px;
+    color: #777;
+    letter-spacing: -0.5px;
+}
+
+.ft_page_link ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+}
+
+.ft_page_link ul li select{
+    width: 150px;
+    height: 36px;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    letter-spacing: -1px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+.ft_page_link ul li select option:first-child{
+    background-color: #395DB2;
+    font-family: 'Noto Sans KR', sans-serif;
+}

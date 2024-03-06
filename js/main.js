@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
     $('#fullpage').fullpage({
-      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six', 'footer'],
+      anchors: ['main_vis', 'main_sec', 'main_trd', 'main_fth', 'main_ffh', 'main_six'],
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
