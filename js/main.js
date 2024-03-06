@@ -6,7 +6,8 @@ $(document).ready(function(){
       css3: true,
       slidesNavigation: true,
       controlArrows: false,
-      normalScrollElements: '.fullpage_normalScroll'
+      normalScrollElements: '.fullpage_normalScroll',
+      menu: '.main_gnb'
 	});
 
   // $.fn.fullpage.destroy();
