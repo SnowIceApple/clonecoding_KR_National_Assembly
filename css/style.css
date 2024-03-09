@@ -623,6 +623,9 @@ section{
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main_search_area button ion-icon{
@@ -1698,8 +1701,7 @@ section{
 
 .act_bill_list{
     width: 100%;
-    height: calc(100% - 40px);
-    min-height: 480px;
+    height: 483px;
     box-sizing: border-box;
 }
 
