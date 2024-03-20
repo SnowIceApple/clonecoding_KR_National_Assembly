@@ -7,7 +7,8 @@ $(document).ready(function(){
       slidesNavigation: true,
       controlArrows: false,
       normalScrollElements: '.fullpage_normalScroll',
-      menu: '.main_gnb'
+      menu: '.main_gnb',
+      responsive: 1200,
 	});
 
   // $.fn.fullpage.destroy();

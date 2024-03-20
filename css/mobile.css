@@ -1,5 +1,9 @@
 @media all and (max-width: 1520px){
 
+    .header > div{
+        padding: 0 20px;
+    }
+
     .floor1 > li{
         width: 155px;
     }
@@ -7,4 +11,154 @@
     .floor2{
         width: 155px;
     }
+
+
+}
+
+@media all and (max-width: 1390px){
+
+    .logo a img{
+        width: 200px;
+    }
+
+    .floor1 > li{
+        width: 135px;
+    }
+
+    .header_bot{
+        padding-right: 0px !important;
+    }
+}
+
+@media all and (max-width: 1200px){
+
+    .container{
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
+
+    .section_inner{
+        padding-top: 0px;
+    }
+
+    .section_content_box{
+        padding-bottom: 0px;
+    }
+
+    #header{
+        position: relative;
+    }
+
+    .header_top{
+        height: 33px;
+    }
+
+    .header_top *{
+        font-size: 12px !important;
+    }
+
+    .logo a img{
+        width: 140px;
+    }
+
+    #nav{
+        display: none;
+    }
+
+    .hbr_slogan img{
+        height: 35px;
+    }
+
+    .header_bot{
+        height: 60px;
+    }
+
+    .main_nav_search_btn{
+        width: 35px;
+        height: 35px;
+    }
+
+    .mnsb_ico{
+        width: 100%;
+        height: 100%;
+        border-width: 1px;
+    }
+
+    .mnsb_ico ion-icon{
+        font-size: 21px;
+    }
+
+    .main_tab_menu ul li button span{
+        font-size: 15px;
+    }
+
+    .main_tab_slide{
+        width: 100%;
+    }
+
+    .main_tab_slide:first-child{
+        margin-bottom: 10px;
+    }
+
+    .main_tab_slide_box{
+        height: auto;
+    }
+
+    .main_tab_slide_box .main_slide_type1 .ss_img{
+        height: 314px;
+    }
+
+    .main_slide_type1 .ss_img{
+        height: 314px;
+        overflow: hidden;
+    }
+
+    .main_bot_box{
+        min-height: auto;
+    }
+
+    .main_bot_box > div{
+        width: 100%;
+    }
+
+    .main_tab_menu.type_sub ul li{
+        width: auto;
+    }
+
+    .main_tab_menu ul li button{
+        padding: 0 22px;
+    }
+
+    .main_notice ul li a{
+        font-size: 14px;
+    }
+
+    .main_slide_type1 .ss_img{
+        height: 200px;
+    }
+
+    .seminar_tit{
+        width: 115px;
+    }
+
+    .seminar_tit strong{
+        font-size: 18px;
+    }
+
+    .seminar_slide{
+        width: calc(100% - 125px);
+    }
+
+    .section_tit{
+        padding: 15px 0;
+    }
+
+    .section_tit h2{
+        font-size: 22px;
+    }
+
+    .section_moving_btn{
+        display: none;
+    }
+
 }
