@@ -160,5 +160,85 @@
     .section_moving_btn{
         display: none;
     }
+    
+    .section_layout{
+        max-height: 9999px;
+    }
+
+    .layout_box{
+        width: 100% !important;
+    }
+
+    .section_layout.type1 .layout_box.wide > div{
+        width: 100%;
+        height: auto;
+    }
+
+    .tid_tit{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .ss_banner_box{
+        flex-direction: column;
+    }
+
+    .ssb_date{
+        text-align: center;
+    }
+
+    .act_bill_list ul li{
+        width: calc(50% - 10px);
+        margin-bottom: 13px;
+    }
+
+    .act_bill_list{
+        height: auto;
+    }
+
+    .sns_list_box ul li{
+        width: calc(50% - 7.5px);
+        margin-bottom: 15px;
+    }
+
+    .sns_list{
+        width: 100%;
+    }
+
+    .dr_table_tab_box{
+        display: none;
+    }
+
+    .result_wide_tab{
+        width: 100%;
+        flex: none;
+        margin-bottom: 10px;
+    }
+
+    .result_wide_tab_cont{
+        width: 100%;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .rwt_info_link:first-child{
+        margin-bottom: 10px;
+    }
+
+    .rwt_chart{
+        height: auto;
+        padding: 60px 0;
+        margin: 10px 0;
+    }
+
+    .rwt_chart_box{
+        padding: 0px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .chart_labels{
+        margin-top: 15px;
+    }
 
 }
