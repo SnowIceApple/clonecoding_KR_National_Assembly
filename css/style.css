@@ -425,6 +425,7 @@ section{
     background: #fff;
     z-index: 9999;
     display: none;
+    overscroll-behavior: contain;
 }
 
 .mn_tit{

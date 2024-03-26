@@ -42,13 +42,14 @@ $(document).ready(function(){
 
   $('.mob_nav_open a').on('click', function(e){
     e.preventDefault();
-    $('.mob_nav').addClass('active');
+    $('.mob_nav').stop().slideDown(100);
   });
 
   $('.mob_nav_close').on('click', function(e){
     e.preventDefault();
-    $('.mob_nav').removeClass('active');
+    $('.mob_nav').stop().slideUp(100);
   });
+
 
   $('.main_act_tab_btn').each(function(){
     $(this).children().find('li').on('click', function(){
