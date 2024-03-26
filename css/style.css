@@ -341,7 +341,7 @@ section{
 }
 
 .main_search_modal{
-    width: 100%;
+    width: calc(100% - 40px);
     max-width: 1200px;
     padding: 90px 0;
     background-color: #EAEEF2;
