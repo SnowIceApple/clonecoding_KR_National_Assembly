@@ -36,6 +36,20 @@ $(document).ready(function(){
     });
   });
 
+  $('.mnl_open').on('click', function(){
+    $(this).parent('li').toggleClass('active');
+  });
+
+  $('.mob_nav_open a').on('click', function(e){
+    e.preventDefault();
+    $('.mob_nav').addClass('active');
+  });
+
+  $('.mob_nav_close').on('click', function(e){
+    e.preventDefault();
+    $('.mob_nav').removeClass('active');
+  });
+
   $('.main_act_tab_btn').each(function(){
     $(this).children().find('li').on('click', function(){
       $(this).addClass('active').siblings().removeClass('active');

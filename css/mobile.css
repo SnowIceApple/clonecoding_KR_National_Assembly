@@ -57,6 +57,14 @@
         font-size: 12px !important;
     }
 
+    .htr_floor1 > li:nth-child(6){
+        display: none;
+    }
+
+    .ht_box.left ul li:not(:first-child){
+        display: none;
+    }
+
     .logo a img{
         width: 140px;
     }
@@ -76,6 +84,14 @@
     .main_nav_search_btn{
         width: 35px;
         height: 35px;
+    }
+
+    .mob_nav_open{
+        display: block;
+    }
+
+    .mob_nav.active{
+        display: block;
     }
 
     .mnsb_ico{
