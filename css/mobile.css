@@ -251,6 +251,24 @@
         border: none;
     }
 
+    .sns_tab_btn{
+        justify-content: flex-start;
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+
+    .sns_tab_btn a{
+        right: 10px;
+    }
+
+    .sns_list_slide{
+        padding-top: 0px;
+    }
+
+    .sns_list_slide .swiper-slide{
+        width: calc(50% - 7.5px) !important;
+    }
+
     .dr_table_tab_box{
         display: none;
     }
@@ -284,6 +302,25 @@
 
     }
 
+    .layout_box.half{
+        height: auto;
+    }
+
+    .current_tab_cont{
+        height: auto;
+    }
+
+    .ctc_chart_box.type_pos_a{
+        position: static;
+        width: 45%;
+        height: auto;
+        transform: translateY(0);
+    }
+
+    .ctc_chart_box.type_pos_a span{
+        display: none;
+    }
+
     .rwt_chart{
         height: auto;
         padding: 60px 0;
@@ -298,6 +335,27 @@
 
     .chart_labels{
         margin-top: 15px;
+    }
+
+    .comp_list_tab_btn{
+        display: none;
+    }
+
+    .comp_list_tab_cont{
+        width: auto;
+    }
+
+    .comp_slide_box{
+        width: 725px;
+        padding: 13px 0px 10px 0px;
+    }
+
+    .comp_box{
+        justify-content: center;
+    }
+
+    .swiper_control.pos_comp{
+        width: calc(100% + 130px);
     }
 
     .pltc_list ul li{
@@ -346,6 +404,75 @@
         width: 275px;
         height: 445px;
         margin: 0 auto;
+    }
+
+    .publications_banner{
+        margin-top: 40px;
+    }
+
+    .publications_banner ul{
+        gap: 8px 0;
+    }
+
+    .publications_banner ul li{
+        width: 100%;
+        height: 55px;
+    }
+
+    .publications_banner ul li a img{
+        height: 35px;
+    }
+
+    .footer{
+        margin-top: 10px;
+        padding-bottom: 15px;
+    }
+
+    .ft_list{
+        display: none;
+    }
+
+    .footer_inner > div{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ft_logo{
+        padding-bottom: 25px;
+    }
+
+    .ft_address{
+        width: 100%;
+        border-bottom: 1px solid #ebebeb; 
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+    }
+
+    .ft_address address{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .ft_address address p{
+        text-align: center;
+    }
+
+    .ft_address address ul li{
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .ft_address address ul li::before{
+        display: none;
+    }
+
+    .ft_page_link{
+        display: none;
+    }
+
+    .ft_copyright{
+        margin-bottom: 0px;
     }
 
 }

@@ -60,6 +60,21 @@ $(document).ready(function(){
     });
   });
 
+  $(window).on('resize', function(){
+    $('.main_act_tab_btn li').eq(0).addClass('active').siblings().removeClass('active');
+    $('.main_act_tab_cont').eq(0).addClass('active').siblings().removeClass('active');
+    $('.main_act_tab_select select').prop('selectedIndex', 0);
+  });
+
+  $('.main_act_tab_select').each(function(){
+    $(this).children('select').on('change', function(){
+      var tg = $(this).val();
+      var tgNum = $(this).prop('selectedIndex');
+
+      $(this).parents('.main_act_tab_select').siblings('.main_act_tab_cont').eq(tgNum).addClass('active').siblings().removeClass('active');
+    }); 
+  });
+
   $('.main_tab_menu').each(function(){
     $(this).children().find('li').on('click', function(){
       $(this).addClass('active').siblings().removeClass('active');
@@ -579,6 +594,7 @@ $('.pr_list_vote_bar span').each(function(){
 const swiper_sns = new Swiper('.swiper_sns', {
   loop: true,
   speed: 3500,
+  slidesPerView: 'auto',
   autoplay: {
     delay: 0,
     stopOnLastSlide: true,
@@ -587,8 +603,7 @@ const swiper_sns = new Swiper('.swiper_sns', {
  },
   observer: true, 
   observerParents: true,
-  slidesPerView: "auto",
-  spaceBetween: 14.66667,
+  spaceBetween: 15,
 
 
 });
