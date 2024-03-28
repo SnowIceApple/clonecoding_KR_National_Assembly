@@ -1848,6 +1848,24 @@ section{
     color: var(--na_color2-);
 }
 
+.main_act_tab_select{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+.main_act_tab_select select{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 0px;
+    color: #666;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    height: 35px;
+}
+
 .main_act_tab_cont.floor_1st{
     display: none;
     width: 100%;
@@ -2533,7 +2551,7 @@ section{
     position: relative;
 }
 
-.discuss_num ul li::after{
+.discuss_num ul li:first-child:after{
     display: block;
     content: "/";
     position: absolute;
