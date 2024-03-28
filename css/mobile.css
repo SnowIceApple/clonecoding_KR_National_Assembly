@@ -190,6 +190,14 @@
         height: auto;
     }
 
+    .main_tab_menu.type_mini{
+        display: none;
+    }
+
+    .main_tab_mobile_menu{
+        display: block;
+    }
+
     .tid_tit{
         justify-content: center;
         margin-bottom: 15px;
