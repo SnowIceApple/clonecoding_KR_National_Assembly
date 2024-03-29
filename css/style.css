@@ -543,7 +543,7 @@ section{
 
 .mob_floor2{
     width: 100%;
-    padding: 15px 0;
+    padding: 15px 10px;
     display: none;
 }
 
@@ -554,7 +554,6 @@ section{
 .mob_floor2 li{
     width: 100%;
     box-sizing: border-box;
-    padding: 0 10px;
 }
 
 .mob_floor2 li a{

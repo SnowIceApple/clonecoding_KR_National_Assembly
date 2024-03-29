@@ -360,6 +360,7 @@
 
     .comp_box{
         justify-content: center;
+        padding: 12px 0 !important;
     }
 
     .swiper_control.pos_comp{
