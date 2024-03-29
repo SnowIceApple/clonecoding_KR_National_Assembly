@@ -27,12 +27,16 @@ $(document).ready(function(){
   $('.modal_open').each(function(e){
     $(this).on('click', function(){
       $('body').addClass('modal_active');
+      $(this).siblings().closest('.modal').addClass('active');
+      $(this).parent().siblings('.modal').addClass('active');
     });
   });
 
   $('.modal_close').each(function(e){
     $(this).on('click', function(){
       $('body').removeClass('modal_active');
+      $(this).siblings().closest('.modal').removeClass('active');
+      $(this).parent().siblings('.modal').removeClass('active');
     });
   });
 

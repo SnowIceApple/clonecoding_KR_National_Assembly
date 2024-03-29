@@ -328,8 +328,8 @@ section{
     display: none !important;
 }
 
-.modal_active .modal{
-    display: block !important;
+.modal.active{
+    display: flex !important;
 }
 
 .mid_modal{
@@ -750,7 +750,120 @@ section{
     background-position: left center;
 }
 
+/* mob_page_util */
 
+.mob_page_util{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    z-index: 2001;
+}
+
+.mob_page_util > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3px 0;
+}
+
+.mob_page_util > ul > li{
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.modal_active .mob_page_util > ul > li::after{
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mob_page_util > ul > li > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: rgba(23,59,101,0.9);
+    color: #fff;
+    letter-spacing: -0.5px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.mob_fixed_menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3000;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.mob_fixed_menu .modal_close{
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mob_fixed_menu .modal_close ion-icon{
+    font-size: 50px;
+    color: #fff;
+}
+
+.mob_fixed_menu ul{
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.mob_fixed_menu ul li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: -0.5px;
+}
+
+.mob_fixed_menu ul li.mfm_tit{
+    background: var(--na_color2-);
+    color: #fff;
+    font-size: 15px;
+    line-height: 42px;
+    font-weight: 600;
+}
+
+.mob_fixed_menu ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+.mob_fixed_menu ul li:last-child a{
+    border-bottom: 0px;
+}
 
 /* section_moving_btn */
 

@@ -104,6 +104,11 @@
         font-size: 21px;
     }
 
+    .mob_page_util{
+        display: block;
+    }
+
+
     .main_tab_menu ul li button span{
         font-size: 15px;
     }
