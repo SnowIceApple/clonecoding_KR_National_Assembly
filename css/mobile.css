@@ -108,6 +108,10 @@
         display: block;
     }
 
+    .main_search{
+        width: calc(100% - 8px);
+    }
+
 
     .main_tab_menu ul li button span{
         font-size: 15px;
@@ -132,6 +136,11 @@
     .main_slide_type1 .ss_img{
         height: 314px;
         overflow: hidden;
+    }
+
+    .main_slide_type1 .ss_img img{
+        object-fit: fill;
+        height: 100%;
     }
 
     .main_bot_box{
