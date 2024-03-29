@@ -47,11 +47,13 @@ $(document).ready(function(){
   $('.mob_nav_open a').on('click', function(e){
     e.preventDefault();
     $('.mob_nav').stop().slideDown(100);
+    $('.mob_page_util').hide();
   });
 
   $('.mob_nav_close').on('click', function(e){
     e.preventDefault();
     $('.mob_nav').stop().slideUp(100);
+    $('.mob_page_util').show();
   });
 
 
