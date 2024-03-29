@@ -57,6 +57,8 @@
         font-size: 12px !important;
     }
 
+    .htr_floor1 > li:nth-child(1),
+    .htr_floor1 > li:nth-child(5),
     .htr_floor1 > li:nth-child(6){
         display: none;
     }
@@ -112,6 +114,25 @@
         width: calc(100% - 8px);
     }
 
+    .main_search_modal{
+        padding: 75px 0;
+        background-position: left 20px top 10px;
+        background-size: 75px auto;
+    }
+    
+
+    .msm_input_box label{
+        display: none;
+    }
+
+    .msm_input_box{
+        width: calc(100% - 40px);
+    }
+
+    .msm_input_box .main_search_area{
+        margin-left: 0px;
+        width: 100%;
+    }
 
     .main_tab_menu ul li button span{
         font-size: 15px;

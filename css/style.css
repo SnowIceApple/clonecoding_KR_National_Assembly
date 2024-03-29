@@ -1,6 +1,7 @@
 
 html, body{
     font-family: 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -783,7 +784,8 @@ section{
     background: rgba(0, 0, 0, 0.7);
 }
 
-.mob_page_util > ul > li > button{
+.mob_page_util > ul > li > button,
+.mob_page_util > ul > li > a{
     display: flex;
     align-items: center;
     justify-content: center;

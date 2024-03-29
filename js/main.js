@@ -97,7 +97,8 @@ $(document).ready(function(){
   });
 
   $('.mtmm_list ul li').on('click', function(){
-    $('.mtmm_list').removeClass('active').hide();
+    $('.mtmm_open').removeClass('active');
+    $('.mtmm_list').hide();
     $(this).addClass('active').siblings().removeClass('active');
     var tg = $(this);
     var tgTxt = tg.children().find('span').text();
