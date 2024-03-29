@@ -494,13 +494,17 @@ section{
     height: 36px;
 }
 
-#mob_nav_list{
+.mob_nav_container{
     width: 100%;
     max-height: calc(100% - 183px);
     overflow-y: auto;
     box-sizing: border-box;
-    padding: 0 20px;
     overscroll-behavior: contain;
+    padding: 0 20px;
+}
+
+#mob_nav_list{
+    width: 100%;
     margin-bottom: 15px;
 }
 
@@ -582,7 +586,6 @@ section{
 .mob_nav_ext_link{
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
     margin-bottom: 15px;
 }
 
@@ -612,7 +615,7 @@ section{
 .mob_nav_login{
     width: 100%;
     box-sizing: border-box;
-    padding: 0 20px;
+    margin-bottom: 15px;
 }
 
 .mob_nav_login a{
