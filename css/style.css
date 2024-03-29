@@ -533,8 +533,14 @@ section{
 }
 
 .mnl_open ion-icon{
+    position: relative;
+    transform-origin: center;
     font-size: 28px;
     color: #777;
+}
+
+.mob_floor1 > li.active .mnl_open ion-icon{
+    transform: rotate(-180deg);
 }
 
 .mob_floor1 > li.active .mnl_open *{
