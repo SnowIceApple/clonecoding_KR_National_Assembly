@@ -225,6 +225,7 @@
         height: auto;
     }
 
+
     .main_tab_menu.type_mini{
         display: none;
     }
@@ -236,6 +237,10 @@
     .tid_tit{
         justify-content: center;
         margin-bottom: 15px;
+    }
+    
+    .today_info_list{
+        overscroll-behavior: auto;
     }
 
     .ss_banner_box{
