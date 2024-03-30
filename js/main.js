@@ -913,9 +913,31 @@ var comp_slide_options = {
   speed: 500,
   observer: true, 
   observerParents: true,
-  slidesPerView: 6,
   spaceBetween: 15,
-  slidesPerGroup: 6,
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+
+  breakpoints: {
+    975: {
+      slidesPerView: 6,
+      slidesPerGroup: 6,
+    },
+
+    775: {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+
+    570: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+    },
+
+    475: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+    },
+  },
 };
 
 var cs1_options = Object.assign({}, comp_slide_options);

@@ -389,8 +389,12 @@
     }
 
     .comp_slide_box{
-        width: 725px;
+        width: 738px;
         padding: 13px 0px 10px 0px;
+    }
+
+    .comp_swiper .swiper-slide{
+        width: 110px;
     }
 
     .comp_box{
@@ -432,7 +436,7 @@
     }
 
     .pblc_bookcover{
-        padding: 0 60px 20px 60px;
+        padding: 0 5vw 20px 5vw;
     }
 
     .pblc_bookcover ul{
@@ -519,4 +523,79 @@
         margin-bottom: 0px;
     }
 
+    .ft_copyright p{
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .ft_copyright p br{
+        display: block;
+    }
+
+}
+
+@media all and (max-width: 975px){
+    .comp_slide_box{
+        width: 610px;
+    }
+}
+
+@media all and (max-width: 900px){
+    
+    .act_bill_list ul li{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 775px){
+    .comp_slide_box{
+        width: 485px;
+    }
+
+    .pblc_bookcover{
+        padding: 0 0 20px 0;
+    }
+
+    .pblc_bookcover ul li{
+        width: calc(25% - 10px);
+        height: 140px;
+    }
+    
+}
+
+@media all and (max-width: 750px){
+
+    .pr_list_top{
+        height: auto;
+    }
+
+    .pr_list_top ul li{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pr_list_top ul li:last-child{
+        margin-bottom: 0px;
+    }
+
+    .pltc_list ul li{
+        width: calc(50% - 7.5px) !important;
+    } 
+
+    .pr_list_bot{
+        height: auto;
+    }
+
+}
+
+@media all and (max-width: 570px){
+    .comp_slide_box{
+        width: 360px;
+    }
+}
+
+@media all and (max-width: 475px){
+    .comp_slide_box{
+        width: 225px;
+    }
 }
