@@ -625,6 +625,11 @@
 
 @media all and (max-width: 600px){
 
+
+    .sns_tab_btn a{
+        display: none;
+    }
+
     .sns_list_box ul li{
         width: 100%;
     }
@@ -632,6 +637,7 @@
     .sns_list_slide .swiper-slide{
         width: 100% !important;
     }
+
 }
 
 @media all and (max-width: 570px){

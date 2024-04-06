@@ -525,6 +525,7 @@ section{
     justify-content: space-between;
     box-sizing: border-box;
     border-bottom: 1px solid #bbb;
+    color: #000;
 }
 
 .mob_floor1 > li.active .mnl_open{
@@ -962,6 +963,7 @@ section{
     box-sizing: border-box;
     padding: 0 20px;
     font-family: 'Noto Sans KR', sans-serif;
+    background: #fff;
 }
 
 .main_search_area button{
@@ -2054,6 +2056,7 @@ section{
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
     height: 35px;
+    background-color: #fff;
 }
 
 .main_act_tab_cont.floor_1st{
@@ -3960,6 +3963,7 @@ section{
     color: #666;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 15px;
+    background-color: #fff;
 }
 
 .pblc_search ul li input{
