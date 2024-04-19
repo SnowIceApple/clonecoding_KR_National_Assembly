@@ -602,16 +602,14 @@ var ctx6 = document.getElementById('dr_chart_2');
               min: 0,
               max: 100,
               callback: function(value){return value+ "%"}
-           },
+          },
             scaleLabel: {
             display: true,
             labelString: "Percentage"
-           }
+          }
         }
       },
-
       }
-      
 });
 
 $('.pr_list_vote_bar span').each(function(){
@@ -629,13 +627,14 @@ const swiper_sns = new Swiper('.swiper_sns', {
     stopOnLastSlide: true,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
- },
+},
   observer: true, 
   observerParents: true,
   spaceBetween: 15,
 
 
 });
+
 
 $('.current_tab_btn').each(function(){
   $(this).children().find('li').on('click', function(){
