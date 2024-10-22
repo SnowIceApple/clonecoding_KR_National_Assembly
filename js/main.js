@@ -385,6 +385,7 @@ $(document).ready(function(){
 //       renderCalendar(currentMonth, currentYear);
 
 $('#calendar table td').on('click', function(e){
+  e.preventDefault();
   $(this).parents('table').find('td').not($(this)).removeClass('active');
   $(this).addClass('active');
 });

@@ -1627,7 +1627,6 @@ section{
     width: 40px;
     height: 40px;
     margin: 0 auto;
-    pointer-events: none;
 }
 
 #calendar table td.active a,
