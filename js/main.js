@@ -284,105 +284,112 @@ $(document).ready(function(){
 
   });
 
-  var today = today_ymd();
+//   var today = today_ymd();
 
-  function today_ymd(){
-    var date = new Date();
-    var weekday = ['일', '월', '화', '수', '목', '금', '토'][date.getDay()];
-    return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2) + "(" + weekday + ")";
-}
+//   function today_ymd(){
+//     var date = new Date();
+//     var weekday = ['일', '월', '화', '수', '목', '금', '토'][date.getDay()];
+//     return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2) + "(" + weekday + ")";
+// }
 
-var today2 = today_ymd2();
+// var today2 = today_ymd2();
 
-function today_ymd2(){
-  var date = new Date();
-  return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2);
-}
+// function today_ymd2(){
+//   var date = new Date();
+//   return date.getFullYear() + "." + ("0"+(date.getMonth()+1)).slice(-2) + "." + ("0"+date.getDate()).slice(-2);
+// }
 
-$('.tid_tit h3').text(today2);
+// $('.tid_tit h3').text(today2);
 
-  $('.calendar_desc_tit strong').text(today_ymd);
+//   $('.calendar_desc_tit strong').text(today_ymd);
 
-  var currentDate = new Date();
-      var currentMonth = currentDate.getMonth();
-      var currentYear = currentDate.getFullYear();
+//   var currentDate = new Date();
+//       var currentMonth = currentDate.getMonth();
+//       var currentYear = currentDate.getFullYear();
       
-      function renderCalendar(month, year) {
-        var daysInMonth = new Date(year, month + 1, 0).getDate();
-        var firstDayOfMonth = new Date(year, month, 1).getDay();
-        var table = $("<table>");
-        var tbody = $("<tbody>");
-        var tr = $("<tr>");
-        var dayOfWeek = 0;
+//       function renderCalendar(month, year) {
+//         var daysInMonth = new Date(year, month + 1, 0).getDate();
+//         var firstDayOfMonth = new Date(year, month, 1).getDay();
+//         var table = $("<table>");
+//         var tbody = $("<tbody>");
+//         var tr = $("<tr>");
+//         var dayOfWeek = 0;
         
-        var days = ['일', '월', '화', '수', '목', '금', '토'];
-        for (var i = 0; i < days.length; i++) {
-          tr.append($("<th>").text(days[i]).addClass(i === 0 ? "sun" : i === 6 ? "sat" : ""));
-        }
-        tbody.append(tr);
+//         var days = ['일', '월', '화', '수', '목', '금', '토'];
+//         for (var i = 0; i < days.length; i++) {
+//           tr.append($("<th>").text(days[i]).addClass(i === 0 ? "sun" : i === 6 ? "sat" : ""));
+//         }
+//         tbody.append(tr);
         
-        tr = $("<tr>");
-        for (var i = 0; i < firstDayOfMonth; i++) {
-          tr.append($("<td>").html("&nbsp;").addClass("sun"));
-          dayOfWeek++;
-        }
-        for (var day = 1; day <= daysInMonth; day++) {
-          if (dayOfWeek == 7) {
-            tbody.append(tr);
-            tr = $("<tr>");
-            dayOfWeek = 0;
-          }
-          var td = $("<td>").addClass(dayOfWeek === 0 ? "sun" : dayOfWeek === 6 ? "sat" : "");
-          var a = $("<a>").append($("<span>").text(day));
-          if (year === currentDate.getFullYear() && month === currentDate.getMonth() && day === currentDate.getDate()) {
-            a.addClass("today");
-          }
+//         tr = $("<tr>");
+//         for (var i = 0; i < firstDayOfMonth; i++) {
+//           tr.append($("<td>").html("&nbsp;").addClass("sun"));
+//           dayOfWeek++;
+//         }
+//         for (var day = 1; day <= daysInMonth; day++) {
+//           if (dayOfWeek == 7) {
+//             tbody.append(tr);
+//             tr = $("<tr>");
+//             dayOfWeek = 0;
+//           }
+//           var td = $("<td>").addClass(dayOfWeek === 0 ? "sun" : dayOfWeek === 6 ? "sat" : "");
+//           var a = $("<a>").append($("<span>").text(day));
+//           if (year === currentDate.getFullYear() && month === currentDate.getMonth() && day === currentDate.getDate()) {
+//             a.addClass("today");
+//           }
 
-          a.click(function() {
-            var selectedDate = year + "_" + (month + 1).toString().padStart(2, '0') + "_" + $(this).text().padStart(2, '0');
-            var selectedDate2 = year + "." + (month + 1).toString().padStart(2, '0') + "." + $(this).text().padStart(2, '0');
-            var dateObject = new Date(year, month, $(this).text());
-            var dayOfWeek = ['일', '월', '화', '수', '목', '금', '토'][dateObject.getDay()]; 
-            selectedDate2 += "(" + dayOfWeek + ")";
-            $(this).addClass(selectedDate).parents('table').find('td').children('a').not($(this)).removeClass();
-            $(this).addClass('active');
-            // console.log(selectedDate);
-            $('.calendar_desc_tit strong').text(selectedDate2);
-          });
-          td.append(a);
-          tr.append(td);
-          dayOfWeek++;
-        }
+//           a.click(function() {
+//             var selectedDate = year + "_" + (month + 1).toString().padStart(2, '0') + "_" + $(this).text().padStart(2, '0');
+//             var selectedDate2 = year + "." + (month + 1).toString().padStart(2, '0') + "." + $(this).text().padStart(2, '0');
+//             var dateObject = new Date(year, month, $(this).text());
+//             var dayOfWeek = ['일', '월', '화', '수', '목', '금', '토'][dateObject.getDay()]; 
+//             selectedDate2 += "(" + dayOfWeek + ")";
+//             $(this).addClass(selectedDate).parents('table').find('td').children('a').not($(this)).removeClass();
+//             $(this).addClass('active');
+//             // console.log(selectedDate);
+//             $('.calendar_desc_tit strong').text(selectedDate2);
+//           });
+//           td.append(a);
+//           tr.append(td);
+//           dayOfWeek++;
+//         }
 
-        for (var i = dayOfWeek; i < 7; i++) {
-          tr.append($("<td>").html("&nbsp;").addClass("sun"));
-        }
-        tbody.append(tr);
+//         for (var i = dayOfWeek; i < 7; i++) {
+//           tr.append($("<td>").html("&nbsp;").addClass("sun"));
+//         }
+//         tbody.append(tr);
         
-        table.append(tbody);
-        $("#calendar").html(table);
-        $("#currentMonthYear").text(year + "." + (month + 1).toString().padStart(2, '0'));
-      }
+//         table.append(tbody);
+//         $("#calendar").html(table);
+//         $("#currentMonthYear").text(year + "." + (month + 1).toString().padStart(2, '0'));
+//       }
       
-      $("#prevMonth").click(function() {
-        currentMonth--;
-        if (currentMonth < 0) {
-          currentMonth = 11;
-          currentYear--;
-        }
-        renderCalendar(currentMonth, currentYear);
-      });
+//       $("#prevMonth").click(function() {
+//         currentMonth--;
+//         if (currentMonth < 0) {
+//           currentMonth = 11;
+//           currentYear--;
+//         }
+//         renderCalendar(currentMonth, currentYear);
+//       });
       
-      $("#nextMonth").click(function() {
-        currentMonth++;
-        if (currentMonth > 11) {
-          currentMonth = 0;
-          currentYear++;
-        }
-        renderCalendar(currentMonth, currentYear);
-      });
+//       $("#nextMonth").click(function() {
+//         currentMonth++;
+//         if (currentMonth > 11) {
+//           currentMonth = 0;
+//           currentYear++;
+//         }
+//         renderCalendar(currentMonth, currentYear);
+//       });
       
-      renderCalendar(currentMonth, currentYear);
+//       renderCalendar(currentMonth, currentYear);
+
+$('#calendar table td').on('click', function(e){
+  $(this).parents('table').find('td').not($(this)).removeClass('active');
+  $(this).addClass('active');
+});
+
+
 
       $('.result_wide_tab_scroll').mCustomScrollbar({
 
