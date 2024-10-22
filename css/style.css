@@ -1630,7 +1630,7 @@ section{
 }
 
 #calendar table td.active a,
-#calendar table td.active a{
+#calendar table td.today a{
     display: flex;
     align-items: center;
     justify-content: center;
