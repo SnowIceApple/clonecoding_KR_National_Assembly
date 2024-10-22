@@ -114,7 +114,8 @@ $(document).ready(function(){
     $('.mtmm_list').stop().slideToggle(150);
   }); 
 
-  $('.result_wide_tab_scroll ul li a').each(function(){
+  $('.result_wide_tab_scroll ul li a').each(function(e){
+    e.preventDefault();
     $(this).on('click', function(){
       $(this).parent('li').addClass('active').siblings().removeClass('active');
       var tg = $(this);
